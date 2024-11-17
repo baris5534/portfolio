@@ -5,8 +5,23 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
-  },
+    extend: {
+      fontFamily: {
+        montserrat: ["'Montserrat'", "sans-serif"], // Montserrat font ailesi
+      },
+      fontWeight: {
+        montserratThin: 100,
+        montserratExtraLight: 200,
+        montserratLight: 300,
+        montserratRegular: 400,
+        montserratMedium: 500,
+        montserratSemiBold: 600,
+        montserratBold: 700,
+        montserratExtraBold: 800,
+        montserratBlack: 900,
+      },
+    },
+    },
   plugins: [],
 }
 

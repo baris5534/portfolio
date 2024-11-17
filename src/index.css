@@ -6,7 +6,4 @@
     .text-style{
      @apply   pointer-events-none whitespace-pre-wrap bg-gradient-to-b bg-clip-text font-semibold leading-none text-transparent from-white to-slate-700/50;
     };
-    .hover-effect{
-    @apply  bg-red-300 hover:bg-blue-400;
-    }
 }
