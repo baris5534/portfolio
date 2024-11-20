@@ -1,6 +1,7 @@
 import Profileimg from "./components/Profileimg";
 import Aboutme from "./components/Aboutme";
 import Frameworks from "./components/Frameworks";
+import Projects from "./components/Projects";
 import "@fontsource/montserrat";
 
 //import bgimg from "./assets/gdbg.jpg";
@@ -21,8 +22,11 @@ function App() {
           </div>
         </div>
       </div>
-      <div className="w-full">
+      <div className="w-full py-5 border-b-2 border-black">
         <Frameworks/>
+      </div>
+      <div className="w-full py-5 border-b-2 border-black">
+        <Projects/>
       </div>
     </div>
     </div>

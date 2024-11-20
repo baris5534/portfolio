@@ -21,14 +21,14 @@ const CardSlider = () => {
         alignItems: "center",
         width: "100%",
         overflow: "hidden",
-        padding: "20px 0",
+        padding: "20px 0 0 50px",
       }}
     >
       <span className="w-5/6 text-white text-2xl py-5 text-left">Frameworkler</span>
       {/* Sürüklenebilir Alan */}
       <motion.div
         drag="x"
-        dragConstraints={{ left: -250, right: 0 }} // Sürükleme sınırları
+        dragConstraints={{ left: -200, right: 0 }} // Sürükleme sınırları
         style={{
           display: "flex",
           gap: "16px",
@@ -38,7 +38,7 @@ const CardSlider = () => {
       >
         {cards.map((card, index) => (
           <motion.div
-          className="border-2 space-y-2 border-gray-700 bg-gradient-to-r from-slate-900 to-slate-700 flex pointer-events-none flex-col shadow-white shadow-2xl"
+          className="border-2  space-y-2 border-gray-700 bg-gradient-to-r from-slate-900 to-slate-700 flex pointer-events-none flex-col shadow-white shadow-2xl"
             key={card.id}
             //onClick={() => setActiveCard(index)} // Tıklanan kartı setActiveCard ile ayarla
             style={{
@@ -53,6 +53,15 @@ const CardSlider = () => {
               transition: "all 0.3s ease",
               flexShrink: 0, // Kartların genişliklerini korumasını sağlar
             }}
+            initial={{
+              scale:0,
+              opacity: 0,
+            }}
+            animate={{
+              scale: 1,
+              opacity: 1,
+            }}
+            transition={{  delay: index * 0.1, duration: 0.3 }}
             whileHover={{
               scale: activeCard === index ? 1 : 1.05, // Büyüyen kart hover'da büyümesin
               
@@ -60,7 +69,7 @@ const CardSlider = () => {
           >
             <img src={card.img} alt="logo" className="size-24" />
             <h3 className="text-white text-2xl text-center">{card.title}</h3>
-            <span className="text-slate-400">{card.level}</span>
+            <span className="text-slate-400 ">{card.level}</span>
           </motion.div>
         ))}
       </motion.div>

@@ -76,11 +76,11 @@ const LinksList = () => {
     <ul className="flex mt-3 space-x-2">
       {links.map((link, index) => (
         <motion.li 
-        whileHover={{scale: 2, X: 50, Y: -50}}
-        whileTap={{scale: 1}}
-      transition={{duration: 0.5}}
-        className="flex flex-row" key={index}>
-          <a className="flex space-x-1 text-slate-400" href={link.url} target="_blank" rel="noopener noreferrer">
+        //whileHover={{scale: 2, X: 50, Y: -50}}
+        //whileTap={{scale: 1}}
+      //transition={{duration: 0.5}}
+        className="flex flex-row items-center justify-center" key={index}>
+          <a className="flex space-x-1 text-slate-400 items-center cursor-pointer" href={link.url} target="_blank" rel="noopener noreferrer">
            {link.svg} {link.name}
           </a>
         </motion.li>
