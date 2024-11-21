@@ -73,7 +73,7 @@ const LinksList = () => {
   ];
 
   return (
-    <ul className="flex mt-3 space-x-2">
+    <ul className="flex mt-3 space-x-2 max-lg:justify-center">
       {links.map((link, index) => (
         <motion.li 
         //whileHover={{scale: 2, X: 50, Y: -50}}

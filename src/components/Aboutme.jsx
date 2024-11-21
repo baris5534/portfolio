@@ -4,7 +4,7 @@ import Links from "./links"
 const about = ["Merhaba, Ben"]
 const name = ["Barış Yıldız"]
 const meslek = ["FrontEnd Developer'ım"]
-const  resume = ["Ben lise hayatımdan İtibaren Web arayüzüne merak sardım ve öğrenmeye başladım. kariyerimi frontend alanında geliştirmeye merak sardım ve işimi mutluluk ile yapıyorum. yeni teknolojileri takip ederim ."]
+const  resume = ["Ben lise hayatımdan İtibaren Web arayüzüne merak sardım ve öğrenmeye başladım. kariyerimi frontend alanında geliştirmeye merak sardım ve İşimi mutluluk İle yapıyorum. yeni teknolojileri takip ederim ."]
 
 const containerVariants = {
   hidden: { opacity: 1 }, // Başlangıç durumu
@@ -24,17 +24,17 @@ export default function Aboutme (){
 
   
     return(
-      <>
+      <div>
       <motion.div
-      className="flex flex-col space-y-1 capitalize *:text-style"
+      className="flex flex-col  justify-center items-center space-y-1 capitalize *:text-stye"
       variants={containerVariants}
       initial="hidden"
       animate="visible"
     >
-      <motion.h2 className="text-6xl" variants={itemVariants}>
+      <motion.h2 className="text-6xl max-xl:text-4xl text-left" variants={itemVariants}>
         {about}
       </motion.h2>
-      <motion.h1 className="text-8xl text-left" variants={itemVariants}>
+      <motion.h1 className="text-8xl max-lg:text-5xl text-left" variants={itemVariants}>
         {name}
       </motion.h1>
       <motion.h3 className="text-4xl text-left" variants={itemVariants}>
@@ -45,7 +45,7 @@ export default function Aboutme (){
       </motion.span>
     </motion.div>
     <Links/>
-    </>
+    </div>
              
     )
 }

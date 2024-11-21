@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import { motion } from "framer-motion";
 
 
@@ -13,87 +13,79 @@ export default function Projects(){
           // { id: 6, title: "Framer Motion", img:"/src/assets/framer-motion-seeklogo.svg", level:"Başlangıç" },
         ];
       
-        const [activeCard] = useState(null); // Hangi kartın büyüyeceğini tutar
-      
-        return (
-          <div
+        const sliderRef = useRef(null);
+  const [dragLimits, setDragLimits] = useState({ left: 0, right: 0 });
+
+  useEffect(() => {
+    const calculateDragLimits = () => {
+      if (sliderRef.current) {
+        const sliderWidth = sliderRef.current.scrollWidth; // Slider toplam genişliği
+        const visibleWidth = sliderRef.current.offsetParent.offsetWidth; // Görünür alan genişliği
+        setDragLimits({
+          left: visibleWidth - sliderWidth,
+          right: 0,
+        });
+      }
+    };
+
+    calculateDragLimits(); // İlk yüklemede hesapla
+    window.addEventListener("resize", calculateDragLimits); // Ekran boyutu değişirse yeniden hesapla
+
+    return () => window.removeEventListener("resize", calculateDragLimits);
+  }, []);
+
+  return (
+    <div
+      style={{
+        overflow: "hidden",
+        width: "100%",
+        padding: "20px 0",
+      }}
+    >
+      <h2 className="text-white text-2xl mb-5 px-10 max-sm:px-5">Frameworkler</h2>
+      <motion.div 
+      className="px-10 max-sm:px-5"
+        ref={sliderRef}
+        drag="x"
+        dragConstraints={dragLimits}
+        style={{
+          display: "flex",
+          gap: "16px",
+          cursor: "grab",
+        }}
+        whileTap={{ cursor: "grabbing" }}
+      >
+        {cards.map((card) => (
+          <motion.div
+            key={card.id}
+            className="bg-gradient-to-r from-gray-800 to-gray-900 p-4 rounded-lg shadow-md"
             style={{
+              minWidth: "200px",
+              height: "300px",
               display: "flex",
               flexDirection: "column",
               alignItems: "center",
-              width: "100%",
-              overflow: "hidden",
-              padding: "20px 0 0 50px",
+              justifyContent: "center",
+              flexShrink: 0,
             }}
+            whileHover={{
+              scale: 1.05,
+            }}
+            transition={{ type: "spring", stiffness: 300 }}
           >
-            <span className="w-5/6 text-white text-2xl py-5 text-left">Projeler</span>
-            {/* Sürüklenebilir Alan */}
-            <motion.div
-              drag="x"
-              dragConstraints={{ left: -200, right: 0 }} // Sürükleme sınırları
-              style={{
-                display: "flex",
-                gap: "16px",
-                cursor: "grab",
-              }}
-              whileTap={{ cursor: "grabbing" }}
-            >
-              {cards.map((card, index) => (
-                <motion.div
-                className="border-2  space-y-2 border-gray-700 bg-gradient-to-r from-slate-900 to-slate-700 flex pointer-events-none flex-col shadow-white shadow-2xl"
-                  key={card.id}
-                  //onClick={() => setActiveCard(index)} // Tıklanan kartı setActiveCard ile ayarla
-                  style={{
-                    width: activeCard === index ? "240px" : "200px",
-                    height: activeCard === index ? "320px" : "300px",
-                    
-                    borderRadius: "16px",
-                    display: "flex",
-                    justifyContent: "center",
-                    alignItems: "center",
-                    boxShadow: "0 4px 8px rgba(0, 0, 0, 0.2)",
-                    transition: "all 0.3s ease",
-                    flexShrink: 0, // Kartların genişliklerini korumasını sağlar
-                  }}
-                  initial={{
-                    scale:0,
-                    opacity: 0,
-                  }}
-                  animate={{
-                    scale: 1,
-                    opacity: 1,
-                  }}
-                  transition={{  delay: index * 0.1, duration: 0.3 }}
-                  whileHover={{
-                    scale: activeCard === index ? 1 : 1.05, // Büyüyen kart hover'da büyümesin
-                    
-                  }}
-                >
-                  <img src={card.img} alt="logo" className="size-24" />
-                  <h3 className="text-white text-2xl text-center">{card.title}</h3>
-                  <span className="text-slate-400 ">{card.level}</span>
-                </motion.div>
-              ))}
-            </motion.div>
-      
-            {/* Kart Seçim Durumu 
-            <div style={{ marginTop: "20px", display: "flex", gap: "8px" }}>
-              {cards.map((card, index) => (
-                <button
-                  key={card.id}
-                  onClick={() => setActiveCard(index)}
-                  style={{
-                    width: activeCard === index ? "16px" : "12px",
-                    height: activeCard === index ? "16px" : "12px",
-                    backgroundColor: activeCard === index ? "#007BFF" : "lightgray",
-                    border: "none",
-                    borderRadius: "50%",
-                    transition: "all 0.3s ease",
-                    cursor: "pointer",
-                  }}
-                ></button>
-              ))}
-            </div>*/}
-          </div>
-        );
-}
+            <img
+             className="pointer-events-none"
+              src={card.img}
+              alt={card.title}
+              style={{ width: "100px", height: "100px", marginBottom: "10px" }}
+            />
+            <h3 className="text-white text-xl">{card.title}</h3>
+            <p className="text-gray-400">{card.level}</p>
+          </motion.div>
+        ))}
+      </motion.div>
+    </div>
+  );
+};
+
+
