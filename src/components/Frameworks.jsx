@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 const CardSlider = () => {
   const cards = [
-    { id: 1, title: "Html", img: "src/assets/html.png", level: "Profesyonel" },
+    { id: 1, title: "Html", img: "./src/assets/html.png", level: "Profesyonel" },
     { id: 2, title: "Css", img: "/src/assets/css.png", level: "Profesyonel" },
     { id: 3, title: "Javascript", img: "/src/assets/js.png", level: "Orta" },
     { id: 4, title: "Reactjs", img: "/src/assets/react.svg", level: "Başlangıç" },
