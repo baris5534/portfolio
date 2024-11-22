@@ -42,7 +42,7 @@ export default function Projects(){
         padding: "20px 0",
       }}
     >
-      <h2 className="text-white text-2xl mb-5 px-10 max-sm:px-5">Frameworkler</h2>
+      <h2 className="text-white text-2xl mb-5 px-10 max-sm:px-5">Projelerim</h2>
       <motion.div 
       className="px-10 max-sm:px-5"
         ref={sliderRef}
