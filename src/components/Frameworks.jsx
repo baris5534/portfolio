@@ -4,8 +4,8 @@ import { motion } from "framer-motion";
 const CardSlider = () => {
   const cards = [
     { id: 1, title: "Html", img: "src/assets/html.png", level: "Profesyonel" },
-    { id: 2, title: "Css", img: "/src/assets/css.png", level: "Profesyonel" },
-    { id: 3, title: "Javascript", img: "/src/assets/js.png", level: "Orta" },
+    { id: 2, title: "Css", img: "./src/assets/css.png", level: "Profesyonel" },
+    { id: 3, title: "Javascript", img: "../src/assets/js.png", level: "Orta" },
     { id: 4, title: "Reactjs", img: "/src/assets/react.svg", level: "Başlangıç" },
     { id: 5, title: "Tailwindcss", img: "/src/assets/tailwindcss.png", level: "Profesyonel" },
     { id: 6, title: "Framer Motion", img: "/src/assets/framer-motion-seeklogo.svg", level: "Başlangıç" },

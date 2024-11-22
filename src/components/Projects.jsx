@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 export default function Projects(){
     
         const cards = [
-          { id: 1, title: "Proje ismi", img:"src/assets/", level:"Proje Anlatımı" },
+          { id: 1000, title: "Proje ismi", img:"", level:"Projelerim için beklemede kalın" },
           // { id: 2, title: "Css", img:"/src/assets/css.png", level:"Profesyonel" },
           // { id: 3, title: "Javascript", img:"/src/assets/js.png", level:"Orta" },
           // { id: 4, title: "Reactjs", img:"/src/assets/react.svg", level:"Başlangıç" },
@@ -61,6 +61,7 @@ export default function Projects(){
             className="bg-gradient-to-r from-gray-800 to-gray-900 p-4 rounded-lg shadow-md"
             style={{
               minWidth: "200px",
+              maxWidth: "200px",
               height: "300px",
               display: "flex",
               flexDirection: "column",
