@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 export default function Projects(){
     
         const cards = [
-          { id: 1000, title: "Proje ismi", img:"", level:"Projelerim için beklemede kalın" },
+          { id: 1000, title: "Proje ismi", img:"", level:"Projelerim için beklemede kalın " },
           // { id: 2, title: "Css", img:"/src/assets/css.png", level:"Profesyonel" },
           // { id: 3, title: "Javascript", img:"/src/assets/js.png", level:"Orta" },
           // { id: 4, title: "Reactjs", img:"/src/assets/react.svg", level:"Başlangıç" },
