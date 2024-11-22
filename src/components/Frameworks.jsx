@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import html from "../assets/html.png";
 import css from "../assets/css.png";
 import js from "../assets/js.png";
-import react from "../assets/react.png";
+import reactimg from "../assets/react.svg";
 import tailwind from "../assets/tailwindcss.png";
 import framer from "../assets/framer-motion-seeklogo.svg";
 
@@ -12,7 +12,7 @@ const CardSlider = () => {
     { id: 1, title: "Html", img: html, level: "Profesyonel" },
     { id: 2, title: "Css", img: css, level: "Profesyonel" },
     { id: 3, title: "Javascript", img: js, level: "Orta" },
-    { id: 4, title: "Reactjs", img: react, level: "Başlangıç" },
+    { id: 4, title: "Reactjs", img: reactimg, level: "Başlangıç" },
     { id: 5, title: "Tailwindcss", img: tailwind, level: "Profesyonel" },
     { id: 6, title: "Framer Motion", img: framer, level: "Başlangıç" },
   ];
