@@ -1,14 +1,20 @@
 import { useRef, useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import html from "../assets/html.png";
+import css from "../assets/css.png";
+import js from "../assets/js.png";
+import react from "../assets/react.png";
+import tailwind from "../assets/tailwindcss.png";
+import framer from "../assets/framer-motion-seeklogo.svg";
+
 const CardSlider = () => {
   const cards = [
     { id: 1, title: "Html", img: html, level: "Profesyonel" },
-    { id: 2, title: "Css", img: "./src/assets/css.png", level: "Profesyonel" },
-    { id: 3, title: "Javascript", img: "../src/assets/js.png", level: "Orta" },
-    { id: 4, title: "Reactjs", img: "/src/assets/react.svg", level: "Başlangıç" },
-    { id: 5, title: "Tailwindcss", img: "/src/assets/tailwindcss.png", level: "Profesyonel" },
-    { id: 6, title: "Framer Motion", img: "/src/assets/framer-motion-seeklogo.svg", level: "Başlangıç" },
+    { id: 2, title: "Css", img: css, level: "Profesyonel" },
+    { id: 3, title: "Javascript", img: js, level: "Orta" },
+    { id: 4, title: "Reactjs", img: react, level: "Başlangıç" },
+    { id: 5, title: "Tailwindcss", img: tailwind, level: "Profesyonel" },
+    { id: 6, title: "Framer Motion", img: framer, level: "Başlangıç" },
   ];
 
   const sliderRef = useRef(null);
