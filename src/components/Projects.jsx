@@ -58,7 +58,7 @@ export default function Projects(){
         {cards.map((card) => (
           <motion.div
             key={card.id}
-            className="bg-gradient-to-r from-gray-800 to-gray-900 p-4 rounded-lg shadow-md"
+            className="bg-gradient-to-r from-gray-800 text-center to-gray-900 p-4 rounded-lg shadow-md"
             style={{
               minWidth: "200px",
               maxWidth: "200px",

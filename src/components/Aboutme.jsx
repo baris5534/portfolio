@@ -26,18 +26,18 @@ export default function Aboutme (){
     return(
       <div>
       <motion.div
-      className="flex flex-col  justify-center items-center space-y-1 capitalize *:text-stye"
+      className="flex flex-col  justify-center items-center *:w-full text-center xl:text-left space-y-1 capitalize *:text-stye"
       variants={containerVariants}
       initial="hidden"
       animate="visible"
     >
-      <motion.h2 className="text-6xl max-xl:text-4xl text-left" variants={itemVariants}>
+      <motion.h2 className="text-6xl max-xl:text-4xl" variants={itemVariants}>
         {about}
       </motion.h2>
-      <motion.h1 className="text-8xl max-lg:text-5xl text-left" variants={itemVariants}>
+      <motion.h1 className="text-8xl max-lg:text-5xl " variants={itemVariants}>
         {name}
       </motion.h1>
-      <motion.h3 className="text-4xl text-left" variants={itemVariants}>
+      <motion.h3 className="text-4xl " variants={itemVariants}>
         Ben <span className="text-white">{meslek}</span>
       </motion.h3>
       <motion.span className="leading-normal" variants={itemVariants}>
