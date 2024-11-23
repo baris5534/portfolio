@@ -6,7 +6,7 @@ export default function Projects(){
     
         const cards = [
           { id: 1, title: "Proje ismi", img: code, level:"Projelerim için beklemede kalın " },
-          // { id: 2, title: "Css", img:"/src/assets/css.png", level:"Profesyonel" },
+          { id: 2, title: "Css", img:"/src/assets/css.png", level:"Profesyonel" },
           // { id: 3, title: "Javascript", img:"/src/assets/js.png", level:"Orta" },
           // { id: 4, title: "Reactjs", img:"/src/assets/react.svg", level:"Başlangıç" },
           // { id: 5, title: "Tailwindcss", img:"/src/assets/tailwindcss.png", level:"Profesyonel" },
