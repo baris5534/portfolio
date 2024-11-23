@@ -7,3 +7,15 @@
      @apply   pointer-events-none whitespace-pre-wrap bg-gradient-to-b bg-clip-text font-semibold leading-none text-transparent from-white to-slate-700/50;
     };
 }
+.custom-scrollbar::-webkit-scrollbar {
+    width: 8px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+    background-color: #1D4ED8; /* Mavi */
+    border-radius: 4px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+    background-color: #F3F4F6; /* Gri */
+}

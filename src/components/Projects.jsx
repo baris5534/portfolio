@@ -2,7 +2,7 @@ import { useState, useRef, useEffect } from "react";
 import { motion } from "framer-motion";
 import code from "../assets/code.png"
 
-export default function Projects(){
+const Projects = () => {
     
         const projects = [
           { id: 1, title: "Proje ismi", img: code, level:"Projelerim için beklemede kalın " },
@@ -90,3 +90,4 @@ export default function Projects(){
 };
 
 
+export default Projects;

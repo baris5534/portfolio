@@ -1,21 +1,23 @@
+import {BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Profileimg from "./components/Profileimg";
 import Aboutme from "./components/Aboutme";
 import Frameworks from "./components/Frameworks";
 import Projects from "./components/Projects";
 import Home from "./pages/Home";
+import {} from "./index.css"
+//import About from "./pages/About";
 import "@fontsource/montserrat";
-import {BrowserRouter, Route, Routes} from "react-router-dom";
 //import bgimg from "./assets/gdbg.jpg";
 //import ScrollWord from "./components/scrollword/App";
 // mobilde sağdan kenarlıklar çıkıyor düzeltilecek
 function App() {
   return (
-    <div className="!bg-black transition-all transform bg-[url('./assets/grbg.jg')]  select-none  bg-cover bg-no-repeat bg-center min-h-screen !text-white !text-opacity-75">
-      <BrowserRouter>
-            <Routes>
-              <Route path="" element={<Home/>}/>
+    <div className="!bg-black transition-all scroll- transform bg-[url('./assets/grbg.jg')]  select-none  bg-cover bg-no-repeat bg-center min-h-screen !text-white !text-opacity-75">
+            <Router>
+              <Routes>
+              <Route path="/" element={<Home/>}/>
             </Routes>
-          </BrowserRouter>
+         </Router> 
           <div className="container  flex-col backdrop-blur-xl bg-white/0 min-h-screen mx-auto flex items-start justify-center">
         <div className="flex flex-row max-lg:flex-col items-center justify-around h-screen  w-full py-5 px-10 border-b-2 border-black">
          <Profileimg/>
@@ -24,7 +26,11 @@ function App() {
 
             <div className="flex flex-col">
              <Aboutme/>
-              
+              {/* <Router>
+                <Routes >
+                <Route path="/about" element={<About/>}/>
+                </Routes>
+              </Router> */}
           </div>
         </div>
       </div>
