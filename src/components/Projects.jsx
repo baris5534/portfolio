@@ -4,7 +4,7 @@ import code from "../assets/code.png"
 
 export default function Projects(){
     
-        const cards = [
+        const projects = [
           { id: 1, title: "Proje ismi", img: code, level:"Projelerim için beklemede kalın " },
           { id: 2, title: "Css", img:"/src/assets/css.png", level:"Profesyonel" },
           // { id: 3, title: "Javascript", img:"/src/assets/js.png", level:"Orta" },
@@ -55,9 +55,9 @@ export default function Projects(){
         }}
         whileTap={{ cursor: "grabbing" }}
       >
-        {cards.map((card) => (
+        {projects.map((project) => (
           <motion.div
-            key={card.id}
+            key={project.id}
             className="bg-gradient-to-r from-gray-800 text-center to-gray-900 p-4 rounded-lg shadow-md"
             style={{
               minWidth: "200px",
@@ -76,12 +76,12 @@ export default function Projects(){
           >
             <img
              className="pointer-events-none"
-              src={card.img}
-              alt={card.title}
+              src={project.img}
+              alt={project.title}
               style={{ width: "100px", height: "100px", marginBottom: "10px" }}
             />
-            <h3 className="text-white text-xl">{card.title}</h3>
-            <p className="text-gray-400">{card.level}</p>
+            <h3 className="text-white text-xl">{project.title}</h3>
+            <p className="text-gray-400">{project.level}</p>
           </motion.div>
         ))}
       </motion.div>
