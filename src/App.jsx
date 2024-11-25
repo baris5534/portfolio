@@ -2,7 +2,7 @@ import {BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Profileimg from "./components/Profileimg";
 import Aboutme from "./components/Aboutme";
 import Frameworks from "./components/Frameworks";
-import Projects from "./components/Projects";
+//import Projects from "./components/Projects";
 import Home from "./pages/Home";
 import {} from "./index.css"
 //import About from "./pages/About";
@@ -38,7 +38,7 @@ function App() {
         <Frameworks/>
       </div>
       <div className="w-full py-5 border-b-2 border-black">
-        <Projects/>
+        {/* <Projects/> */}
       </div>
     </div>
     </div>
