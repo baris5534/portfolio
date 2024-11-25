@@ -1,17 +1,17 @@
 import { useRef, useEffect, useState } from "react";
 import { motion } from "framer-motion";
-import html from "../assets/html.png";
-import css from "../assets/css.png";
-import js from "../assets/js.png";
+// import html from "../assets/html.png";
+// import css from "../assets/css.png";
+// import js from "../assets/js.png";
 import reactimg from "../assets/react.svg";
 import tailwind from "../assets/tailwindcss.png";
 import framer from "../assets/framer-motion-seeklogo.svg";
 
 const CardSlider = () => {
   const cards = [
-    { id: 1, title: "Html", img: html, level: "Profesyonel" },
-    { id: 2, title: "Css", img: css, level: "Profesyonel" },
-    { id: 3, title: "Javascript", img: js, level: "Orta" },
+    // { id: 1, title: "Html", img: html, level: "Profesyonel" },
+    // { id: 2, title: "Css", img: css, level: "Profesyonel" },
+    // { id: 3, title: "Javascript", img: js, level: "Orta" },
     { id: 4, title: "Reactjs", img: reactimg, level: "Başlangıç" },
     { id: 5, title: "Tailwindcss", img: tailwind, level: "Profesyonel" },
     { id: 6, title: "Framer Motion", img: framer, level: "Başlangıç" },
@@ -37,7 +37,7 @@ const CardSlider = () => {
 
     return () => window.removeEventListener("resize", calculateDragLimits);
   }, []);
-
+  
   return (
     <div
     className=""
@@ -61,7 +61,7 @@ const CardSlider = () => {
         whileTap={{ cursor: "grabbing" }}
       >
         {cards.map((card) => (
-          <motion.div
+          <motion.div 
             key={card.id}
             className="bg-gradient-to-r from-gray-800 to-gray-900 p-4 rounded-lg shadow-md"
             style={{
@@ -73,10 +73,19 @@ const CardSlider = () => {
               justifyContent: "center",
               flexShrink: 0,
             }}
+            initial={{
+              scale: 0,
+              opacity: 0,
+            }}
+            whileInView={{
+              scale: 1,
+              opacity: 1,
+             
+            }}
             whileHover={{
               scale: 1.05,
             }}
-            transition={{ type: "spring", stiffness: 300 }}
+            transition={{ type: "easeInOut", duration: 0.5 }}
           >
             <img
             className="pointer-events-none"
