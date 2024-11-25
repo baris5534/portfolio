@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 // import css from "../assets/css.png";
 // import js from "../assets/js.png";
 import reactimg from "../assets/react.svg";
-import tailwind from "../assets/tailwindcss.png";
+import tailwind from "../assets/Tailwindcss.png";
 import framer from "../assets/framer-motion-seeklogo.svg";
 
 const CardSlider = () => {
