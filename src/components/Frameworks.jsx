@@ -9,10 +9,10 @@ import framer from "../assets/framer-motion-seeklogo.svg";
 
 const CardSlider = () => {
   const cards = [
-    { id: 1, title: "Html", img: html, level: "Profesyonel" },
-    { id: 2, title: "Css", img: css, level: "Profesyonel" },
-    { id: 3, title: "Javascript", img: js, level: "Orta" },
-    { id: 4, title: "Reactjs", img: reactimg, level: "Başlangıç" },
+    // { id: 1, title: "Html", img: html, level: "Profesyonel" },
+    // { id: 2, title: "Css", img: css, level: "Profesyonel" },
+    // { id: 3, title: "Javascript", img: js, level: "Orta" },
+    // { id: 4, title: "Reactjs", img: reactimg, level: "Başlangıç" },
     { id: 5, title: "Tailwindcss", img: tailwind, level: "Profesyonel" },
     { id: 6, title: "Framer Motion", img: framer, level: "Başlangıç" },
   ];
