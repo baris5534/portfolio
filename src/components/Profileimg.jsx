@@ -9,7 +9,8 @@ function Profileimg() {
       transition={{ duration: 0.5 }}
       className="rounded-full my-3 border-4 select-none pointer-events-none border-white shadow-white shadow-2xl"
     >
-      <div className="border-2 border-black rounded-full size-[500px] max-sm:size-[280px] max-[360px]:size-[250px] lg:aspect-radio aspect-square">
+      <div className="border-2 border-black rounded-full size-[500px] max-sm:size-[250px] lg:size-[350px] xl:size-[500px] max-lg:size-[500px]
+       max-[360px]:size-[250px] lg:aspect-radio aspect-square">
         <img
           src={profile}
           alt="profile"

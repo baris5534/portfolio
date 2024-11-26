@@ -77,10 +77,13 @@ const CardSlider = () => {
               scale: 0,
               opacity: 0,
             }}
-            whileInView={{
+            // whileInView={{
+            //   scale: 1,
+            //   opacity: 1,
+            // }}
+            animate={{
               scale: 1,
               opacity: 1,
-             
             }}
             whileHover={{
               scale: 1.05,

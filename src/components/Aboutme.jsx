@@ -26,7 +26,7 @@ export default function Aboutme (){
     return(
       <div>
       <motion.div
-      className="flex flex-col  justify-center items-center *:w-full text-center xl:text-left space-y-1 capitalize *:text-stye"
+      className="flex flex-col  justify-center items-center  xl:h-[300px] max-lg:h-[300px] *:w-full text-center xl:text-left space-y-1 capitalize *:text-stye"
       variants={containerVariants}
       initial="hidden"
       animate="visible"
