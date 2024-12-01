@@ -19,10 +19,9 @@ const containerVariants = {
 const itemVariants = {
   hidden: { opacity: 0, y: -50 }, // Yukarıdan başlar
   visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
+
 };
 export default function Aboutme (){
-
-  
     return(
       <div>
       <motion.div

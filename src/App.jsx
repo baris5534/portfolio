@@ -13,14 +13,14 @@ import "@fontsource/montserrat";
 // mobilde sağdan kenarlıklar çıkıyor düzeltilecek
 function App() {
   return (
-    <div className="!bg-black  transition-all scroll- transform bg-[url('./assets/grbg.jg')]  select-none  bg-cover bg-no-repeat bg-center min-h-screen !text-white !text-opacity-75">
+    <div className="!bg-black transition-all scroll- transform bg-[url('./assets/grbg.jg')]  select-none  bg-cover bg-no-repeat bg-center min-h-screen !text-white !text-opacity-75">
             <Router>
               <Routes>
               <Route path="/" element={<Home/>}/>
             </Routes>
          </Router> 
           <div className="container  flex-col  backdrop-blur-xl bg-white/0 min-h-screen mx-auto flex items-start justify-center">
-        <div className="flex  flex-row max-xl:flex-col lg:flex-row lg:h-[600px] max-2xl:h-[700px] max-sm:w-full xl:h-screen items-center justify-around h-screen max-sm:h-screen max-xl:h-[950px]  w-full py-5 px-10 border-b-2 border-black">
+        <div className="flex  flex-row max-xl:flex-col lg:flex-row lg:h-[600px] max-2xl:h-[700px] max-sm:w-full xl:h-screen items-center justify-around h-screen max-sm:h-screen max-xl:h-[950px]  w-full py-5 px-10">
          <Profileimg/>
           
           <div className="flex w-5/12 max-xl:w-full">
@@ -41,11 +41,15 @@ function App() {
         <Projects/>
       </div>
       <div className="border-t-2 border-gray-600 w-full h-auto">
-        <div className="flex flex-row w-full items-center max-sm:flex-col justify-between py-3 px-10">
-          <div>
-            @Barış-Yıldız
+        <div className="flex flex-row w-full max-lg:text-center  max-lg:space-y-5 items-center max-sm:flex-col justify-between py-3 px-10">
+          <div className="flex flex-col">
+            <span>@Barış-Yıldız</span>
+            <span className="flex max-lg:mx-auto "><img src="../src/assets/gps1.svg" alt="" className="w-4 mr-1"/>İstanbul/Türkiye</span>
+            <span>FrontEnd Developer</span>
+            <span className="flex"> <img src="../src/assets/c.svg" alt="" className="mr-1"/> 2024 Barış Yıldız - Tüm Hakları Saklıdır</span>
           </div>
           <div>
+            <span>Beni Takip Edebilirsiniz</span>
                 <Links/>
           </div>
         </div>

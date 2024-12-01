@@ -3,7 +3,23 @@ import {motion} from "motion/react"
 //import { Outlet, Link } from "react-router-dom";
 //import Home from "../pages/Home";
 //import About from "../pages/About";
-
+const linksVariants = {
+    hidden: { opacity: 1 }, // Başlangıç durumu
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.3, // Çocuklar arasındaki gecikme
+      },
+    },
+  };
+  const itemVariants = {
+    hidden: { 
+      opacity: 0,
+      y: -50, // Yukarıdan başlar
+     }, // Yukarıdan başlar
+    visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
+  
+  };
 const LinksList = () => {
   const links = [
     {
@@ -25,8 +41,8 @@ const LinksList = () => {
         xmlns="http://www.w3.org/2000/svg"
         xmlnsXlink="http://www.w3.org/1999/xlink"
         viewBox="0 0 256 256"
-        width="48px"
-        height="48px"
+        width="28px"
+        height="28px"
         fillRule="nonzero"
       >
         <g
@@ -108,26 +124,31 @@ const LinksList = () => {
       </svg>)
 
     },
+    {
+      name: "Medium",
+      url: "https://medium.com/@barisyldz",
+      svg:(<svg xmlns="http://www.w3.org/2000/svg" fill="white" className="border rounded-md p-1"  viewBox="0 0 24 24" width="26px" height="26px"><path d="M7 8c2.757 0 5 2.243 5 5s-2.243 5-5 5-5-2.243-5-5S4.243 8 7 8M7 6c-3.866 0-7 3.134-7 7s3.134 7 7 7 7-3.134 7-7S10.866 6 7 6L7 6zM18 8.693c.409.582 1 2.081 1 4.307s-.591 3.725-1 4.307c-.409-.582-1-2.081-1-4.307S17.591 9.275 18 8.693M18 6.5c-1.657 0-3 2.91-3 6.5s1.343 6.5 3 6.5 3-2.91 3-6.5S19.657 6.5 18 6.5L18 6.5zM23 8A1 5 0 1023 18 1 5 0 1023 8z"/></svg>), 
+    },
   ];
-
+  
   return (
     <div className="flex flex-row flex-wrap justify-center items-center mt-3 gap-2">
     {links.map((link, index) => (
       <motion.span
-        //whileHover={{scale: 2, x: 50, y: -50}}
-        //whileTap={{scale: 1}}
-        //transition={{duration: 0.5}}
+        variants={linksVariants}
         className="flex flex-row items-center justify-center" 
-        key={index}
-      >
-        <a 
+        key={index}>
+        <motion.a 
+          variants={itemVariants}
+          initial="hidden"
+          animate="visible"
           className="flex space-x-1 text-slate-400 items-center cursor-pointer w-auto h-auto" 
           href={link.url} 
           target="_blank" 
           rel="noopener noreferrer"
         >
-          {link.svg} {link.name}
-        </a>
+           {link.svg} {/*{link.name} */}
+        </motion.a>
       </motion.span>
     ))}
     {/* <Link to="/About.jsx">About</Link>
