@@ -40,7 +40,7 @@ function App() {
       <div className="w-full py-5 border-b-2 border-black">
         <Projects/>
       </div>
-      <div className="border-t-2 border-gray-600 w-full h-auto">
+      <div className="border-t-2 text-white font-semibold border-gray-600 w-full h-auto">
         <div className="flex flex-row w-full max-lg:text-center  max-lg:space-y-5 items-center max-sm:flex-col justify-between py-3 px-10">
           <div className="flex flex-col">
             <span>@Barış-Yıldız</span>
