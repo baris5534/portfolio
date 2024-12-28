@@ -33,7 +33,7 @@ export default function Aboutme (){
       <motion.h2 className="text-6xl max-xl:text-4xl" variants={itemVariants}>
         {about}
       </motion.h2>
-      <motion.h1 className="text-8xl max-lg:text-5xl " variants={itemVariants}>
+      <motion.h1 className="text-8xl max-lg:text-5xl" variants={itemVariants}>
         {name}
       </motion.h1>
       <motion.h3 className="text-4xl " variants={itemVariants}>
@@ -43,7 +43,9 @@ export default function Aboutme (){
         {resume}
       </motion.span>
     </motion.div>
-    <Links/>
+    <div className="flex flex-row w-full max-lg:text-center  max-lg:space-y-5 items-center max-sm:flex-col justify-between py-3">
+      <Links/>
+    </div>
     </div>
              
     )

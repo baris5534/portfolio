@@ -8,7 +8,10 @@ export default {
     extend: {
       fontFamily: {
         montserrat: ["'Montserrat'", "sans-serif"], // Montserrat font ailesi
+        rockwell: ['Rockwell', 'serif'],
+        caveat :['Caveat', 'cursive'],
       },
+      
       fontWeight: {
         montserratThin: 100,
         montserratExtraLight: 200,
@@ -19,6 +22,10 @@ export default {
         montserratBold: 700,
         montserratExtraBold: 800,
         montserratBlack: 900,
+      },
+      colors: {
+        'darkmossgreen': "#2B2E1D",
+        'paletaupe': "#D7C6B7",
       },
     },
     },

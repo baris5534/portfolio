@@ -63,7 +63,7 @@ const CardSlider = () => {
         {cards.map((card) => (
           <motion.div 
             key={card.id}
-            className="bg-gradient-to-r from-gray-800 to-gray-900 p-4 rounded-lg shadow-md"
+            className="bg-gradient-to-br from-[#000046] to-[#1cb5e0] p-4 rounded-lg shadow-md"
             style={{
               minWidth: "200px",
               height: "300px",
