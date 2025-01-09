@@ -1,11 +1,13 @@
 import { useState, useRef, useEffect } from "react";
 import { motion } from "framer-motion";
-import code from "../assets/code.png"
+import code from "../assets/code.png";
+import viteimg from "../../public/vite.svg";
 
 const Projects = () => {
     
         const projects = [
-          { id: 1, title: "Proje ismi", img: code, level:"Projelerim için beklemede kalın " },
+          { id: 1, title: "Ne Nedir", img: viteimg, level:"Yazılım dilleri ve frameworklerin özetleri", url:"https://ne-nedir.netlify.app/"},
+          { id: 10, title: "Proje ismi", img: code, level:"Projelerim için beklemede kalın " },
         ];
       
         const sliderRef = useRef(null);
@@ -90,6 +92,7 @@ const Projects = () => {
             />
             <h3 className="text-white text-xl">{project.title}</h3>
             <p className="text-gray-400">{project.level}</p>
+            <a className="bg-slate-600 py-1 p-2 rounded-md text-blue-300 mt-1" href={project.url}>Git</a>
           </motion.div>
         ))}
       </motion.div>

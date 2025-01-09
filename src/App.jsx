@@ -10,7 +10,6 @@ import {} from "./index.css"
 import "@fontsource/montserrat";
 //import bgimg from "./assets/gdbg.jpg";
 //import ScrollWord from "./components/scrollword/App";
-// mobilde sağdan kenarlıklar çıkıyor düzeltilecek
 function App() {
   return (
     <div className="!bg-black transition-all font-rockwell scroll- transform bg-[url('./assets/grbg.jg')]  select-none  bg-cover bg-no-repeat bg-center min-h-screen !text-white !text-opacity-75">
