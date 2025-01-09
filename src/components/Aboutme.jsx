@@ -43,7 +43,7 @@ export default function Aboutme (){
         {resume}
       </motion.span>
     </motion.div>
-    <div className="flex flex-row w-full max-lg:text-center  max-lg:space-y-5 items-center max-sm:flex-col justify-between py-3">
+    <div className="flex flex-row w-full xl:text-right max-lg:space-y-5 items-center max-xl:flex-col justify-between py-3">
       <Links/>
     </div>
     </div>
