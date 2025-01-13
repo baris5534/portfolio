@@ -3,9 +3,9 @@ import { motion } from "framer-motion";
 // import html from "../assets/html.png";
 // import css from "../assets/css.png";
 // import js from "../assets/js.png";
-import reactimg from "../assets/react.svg";
-import tailwind from "../assets/Tailwindcss.png";
-import framer from "../assets/framer-motion-seeklogo.svg";
+import reactimg from "../public/react.svg";
+import tailwind from "../public/Tailwindcss.png";
+import framer from "../public/framer-motion-seeklogo.svg";
 
 const CardSlider = () => {
   // Level badge renklerini belirleyelim
@@ -59,15 +59,7 @@ const CardSlider = () => {
         <h2 className="text-2xl font-bold mb-8 px-10 max-sm:px-5 bg-gradient-to-r from-white to-gray-400 bg-clip-text text-transparent">
           Kullandığım Teknolojiler
         </h2>
-        <motion.div 
-          ref={sliderRef}
-          drag="x"
-          dragConstraints={dragLimits}
-          className="flex gap-6 px-10 max-sm:px-5"
-          style={{ cursor: "grab" }}
-          dragElastic={0.1}
-          whileTap={{ cursor: "grabbing" }}
-        >
+        <section aria-label="Kullandığım Teknolojiler" className="flex gap-6 px-10 max-sm:px-5">
           {cards.map((card) => (
             <motion.div 
               key={card.id}
@@ -131,7 +123,7 @@ const CardSlider = () => {
               </div>
             </motion.div>
           ))}
-        </motion.div>
+        </section>
       </div>
     </div>
   );
