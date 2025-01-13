@@ -23,32 +23,51 @@ const itemVariants = {
 };
 export default function Aboutme (){
     return(
-      <div>
+      <div className="w-full px-4 md:px-6 lg:px-8">
       <motion.div
-      className="flex flex-col  justify-center items-center  xl:h-[300px] max-lg:h-[300px] *:w-full text-center xl:text-left space-y-1 capitalize *:text-stye"
+      className="flex flex-col justify-center items-center 
+                     min-h-[300px] w-full
+                     space-y-3 md:space-y-4 lg:space-y-6"
       variants={containerVariants}
       initial="hidden"
       animate="visible"
     >
-      <motion.h2 className="text-6xl max-xl:text-4xl" variants={itemVariants}>
+      <motion.h2 
+        className="text-3xl sm:text-4xl lg:text-6xl font-bold
+                   w-full text-center lg:text-left" 
+        variants={itemVariants}
+      >
         {about}
       </motion.h2>
-      <motion.h1 className="text-8xl max-lg:text-5xl" variants={itemVariants}>
+      
+      <motion.h1 
+        className="text-4xl sm:text-5xl lg:text-8xl font-bold
+                   w-full text-center lg:text-left" 
+        variants={itemVariants}
+      >
         {name}
       </motion.h1>
-      <motion.h3 className="text-4xl " variants={itemVariants}>
+      
+      <motion.h3 
+        className="text-2xl sm:text-3xl lg:text-4xl
+                   w-full text-center lg:text-left" 
+        variants={itemVariants}
+      >
         Ben <span className="text-white">{meslek}</span>
       </motion.h3>
-      <motion.span className="leading-normal" variants={itemVariants}>
+      
+      <motion.p 
+        className="text-base sm:text-lg lg:text-xl leading-relaxed
+                   w-full text-center lg:text-left" 
+        variants={itemVariants}
+      >
         {resume}
-      </motion.span>
+      </motion.p>
     </motion.div>
-    <div className="flex flex-row w-full max-lg:text-center  max-lg:space-y-5 items-center max-sm:flex-col justify-between py-3">
+    <div className="flex flex-col sm:flex-row items-center justify-between
+                    w-full mt-6 space-y-4 sm:space-y-0">
       <Links/>
     </div>
     </div>
-             
     )
 }
-
-
