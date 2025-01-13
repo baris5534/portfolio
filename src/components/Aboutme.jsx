@@ -4,7 +4,7 @@ import Links from "./links"
 const about = ["Merhaba, Ben"]
 const name = ["Barış Yıldız"]
 const meslek = ["FrontEnd Developer'ım"]
-const  resume = ["Ben lise hayatımdan İtibaren Web arayüzüne merak sardım ve öğrenmeye başladım. kariyerimi frontend alanında geliştirmeye merak sardım ve İşimi mutluluk İle yapıyorum. yeni teknolojileri takip ederim ."]
+const  resume = ["Ben lise hayatımdan İtibaren Web arayüzüne merak sardım ve öğrenmeye başladım. kariyerimi frontend alanında geliştirmeye merak sardım ve İşimi mutluluk İle yapıyorum. yeni teknolojileri takip ederim."]
 
 const containerVariants = {
   hidden: { opacity: 1 }, // Başlangıç durumu
