@@ -6,12 +6,9 @@ import viteimg from "../../public/vite.svg";
 const Projects = () => {
     
         const projects = [
-          { id: 1, title: "Ne Nedir Blog", img: code, description: "Yazılım dilleri ve Frameworkler hakkında bilgi veriyorum", projectUrl: "https://ne-nedir.netlify.app", status: "Geliştirme Aşamasında" },
-          { id: 2, title: "Proje ismi", img: code, description: "Projelerim için beklemede kalın", projectUrl: "https://github.com/username/project", status: "Geliştirme Aşamasında" },
-          { id: 3, title: "Proje ismi", img: code, description: "Projelerim için beklemede kalın", projectUrl: "https://github.com/username/project", status: "Geliştirme Aşamasında" },
-          { id: 4, title: "Proje ismi", img: code, description: "Projelerim için beklemede kalın", projectUrl: "https://github.com/username/project", status: "Geliştirme Aşamasında" },
-          { id: 5, title: "Proje ismi", img: code, description: "Projelerim için beklemede kalın", projectUrl: "https://github.com/username/project", status: "Geliştirme Aşamasında" },
-        ];
+          { id: 1, title: "Ne Nedir Blog", img: viteimg, description: "Yazılım dilleri ve Frameworkler hakkında bilgi veriyorum", projectUrl: "https://ne-nedir.netlify.app", status: "Geliştirme Aşamasında" },
+          { id: 22, title: "Proje ismi", img: code, description: "Projelerim için beklemede kalın", projectUrl: "https://github.com/username/project", status: "Geliştirme Aşamasında" },
+          ];
       
         const sliderRef = useRef(null);
   const [dragLimits, setDragLimits] = useState({ left: 0, right: 0 });
