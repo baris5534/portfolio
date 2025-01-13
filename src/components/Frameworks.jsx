@@ -1,11 +1,11 @@
 import { useRef, useEffect, useState } from "react";
 import { motion } from "framer-motion";
-// import html from "../assets/html.png";
-// import css from "../assets/css.png";
-// import js from "../assets/js.png";
-import reactimg from "../public/react.svg";
-import tailwind from "../public/Tailwindcss.png";
-import framer from "../public/framer-motion-seeklogo.svg";
+// import html from "/html.png";
+// import css from "/css.png";
+// import js from "/js.png";
+import reactimg from "/react.svg";
+import tailwind from "/Tailwindcss.png";
+import framer from "/framer-motion-seeklogo.svg";
 
 const CardSlider = () => {
   // Level badge renklerini belirleyelim

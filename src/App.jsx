@@ -50,7 +50,7 @@ function App() {
                     @Barış-Yıldız
                   </span>
                   <span className="flex items-center text-gray-400 text-sm">
-                    <img src="../src/assets/gps1.svg" alt="" className="w-4 h-4 mr-2"/>
+                    <img src="../../public/gps1.svg" alt="" className="w-4 h-4 mr-2"/>
                     İstanbul/Türkiye
                   </span>
                   <span className="text-gray-400 text-sm">
@@ -58,7 +58,7 @@ function App() {
                   </span>
                 </div>
                 <span className="flex items-center text-gray-500 text-xs"> 
-                  <img src="../src/assets/c.svg" alt="" className="w-3 h-3 mr-1"/>
+                  <img src="../../public/c.svg" alt="" className="w-3 h-3 mr-1"/>
                   2024 Barış Yıldız - Tüm Hakları Saklıdır
                 </span>
               </div>

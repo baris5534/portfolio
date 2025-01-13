@@ -23,7 +23,7 @@ const itemVariants = {
 };
 export default function Aboutme (){
     return(
-      <div className="w-full px-4 md:px-6 lg:px-8">
+      <div className="w-full px-4 md:px-6 lg:px-8 text-white">
       <motion.div
       className="flex flex-col justify-center items-center 
                      min-h-[300px] w-full
@@ -33,7 +33,7 @@ export default function Aboutme (){
       animate="visible"
     >
       <motion.h2 
-        className="text-3xl sm:text-4xl lg:text-6xl font-bold
+        className="text-4xl sm:text-3xl lg:text-5xl font-bold
                    w-full text-center lg:text-left" 
         variants={itemVariants}
       >
@@ -41,7 +41,7 @@ export default function Aboutme (){
       </motion.h2>
       
       <motion.h1 
-        className="text-4xl sm:text-5xl lg:text-8xl font-bold
+        className="text-3xl sm:text-5xl lg:text-7xl font-bold
                    w-full text-center lg:text-left" 
         variants={itemVariants}
       >

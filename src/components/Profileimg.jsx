@@ -1,4 +1,4 @@
-import profile from "../assets/profilepp.jpg";
+import profile from "../../public/profilepp.jpg";
 import { motion } from "motion/react";
 
 function Profileimg() {
