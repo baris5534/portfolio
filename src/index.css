@@ -25,3 +25,14 @@ html, body {
   width: 100%;
   position: relative;
 }
+
+/* Sürükleme sırasında metin seçimini engelle */
+.cursor-grab {
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Webkit tabanlı tarayıcılarda kaydırma çubuğunu gizle */
+.overflow-hidden::-webkit-scrollbar {
+  display: none;
+}

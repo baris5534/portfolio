@@ -23,7 +23,7 @@ const itemVariants = {
 };
 export default function Aboutme (){
     return(
-      <div className="w-full px-4 md:px-6 lg:px-8 text-white">
+      <div className="w-full select-none px-4 md:px-6 lg:px-8 text-white">
       <motion.div
       className="flex flex-col justify-center items-center 
                      min-h-[300px] w-full

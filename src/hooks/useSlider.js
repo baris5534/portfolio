@@ -18,9 +18,18 @@ export function useSlider() {
     };
 
     calculateDragLimits();
+    
+    const resizeObserver = new ResizeObserver(calculateDragLimits);
+    if (sliderRef.current) {
+      resizeObserver.observe(sliderRef.current);
+    }
+
     window.addEventListener("resize", calculateDragLimits);
 
-    return () => window.removeEventListener("resize", calculateDragLimits);
+    return () => {
+      window.removeEventListener("resize", calculateDragLimits);
+      resizeObserver.disconnect();
+    };
   }, []);
 
   return { sliderRef, dragLimits };

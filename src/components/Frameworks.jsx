@@ -6,6 +6,7 @@ import { motion } from "framer-motion";
 import reactimg from "/react.svg";
 import tailwind from "/Tailwindcss.png";
 import framer from "/framer-motion-seeklogo.svg";
+import { useSlider } from "../hooks/useSlider";
 
 const CardSlider = () => {
   // Level badge renklerini belirleyelim
@@ -31,27 +32,7 @@ const CardSlider = () => {
     // { id: 7, title: "JavaScript", img: jsimg, level: "Orta" }, // -> Turuncu/Amber renk
   ];
 
-  const sliderRef = useRef(null);
-  const [dragLimits, setDragLimits] = useState({ left: 0, right: 0 });
-
-  useEffect(() => {
-    const calculateDragLimits = () => {
-      if (sliderRef.current) {
-        const sliderWidth = sliderRef.current.scrollWidth;
-        const containerWidth = sliderRef.current.offsetWidth;
-        
-        setDragLimits({
-          left: -(sliderWidth - containerWidth),
-          right: 0
-        });
-      }
-    };
-
-    calculateDragLimits();
-    window.addEventListener("resize", calculateDragLimits);
-
-    return () => window.removeEventListener("resize", calculateDragLimits);
-  }, []);
+  const { sliderRef, dragLimits } = useSlider();
 
   return (
     <div className="w-full overflow-hidden py-10">
@@ -59,7 +40,15 @@ const CardSlider = () => {
         <h2 className="text-2xl font-bold mb-8 px-10 max-sm:px-5 bg-gradient-to-r from-white to-gray-400 bg-clip-text text-transparent">
           Kullandığım Teknolojiler
         </h2>
-        <section aria-label="Kullandığım Teknolojiler" className="flex gap-6 px-10 max-sm:px-5">
+        
+        <motion.div
+          ref={sliderRef}
+          drag="x"
+          dragConstraints={dragLimits}
+          className="flex gap-6 px-10 max-sm:px-5 cursor-grab active:cursor-grabbing"
+          dragElastic={0.1}
+          dragTransition={{ bounceStiffness: 600, bounceDamping: 20 }}
+        >
           {cards.map((card) => (
             <motion.div 
               key={card.id}
@@ -123,7 +112,7 @@ const CardSlider = () => {
               </div>
             </motion.div>
           ))}
-        </section>
+        </motion.div>
       </div>
     </div>
   );

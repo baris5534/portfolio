@@ -1,10 +1,11 @@
+import { memo } from 'react';
 import { HiOutlineLocationMarker } from "react-icons/hi";
 import { BiCopyright } from "react-icons/bi";
-import FooterSocial from "./FooterSocial";
+import Links from "../../links";
 
-export default function Footer() {
+function Footer() {
   return (
-    <footer className="border-t border-gray-800 bg-gradient-to-b from-gray-900 to-gray-950 w-full">
+    <footer className="border-t border-gray-800/20 bg-gradient-to-b from-black/50 via-black/50 to-black/50 md:from-transparent md:via-gray-900/30 md:to-black/50 backdrop-blur-sm w-full">
       <div className="container mx-auto px-6 py-8">
         <div className="flex flex-col md:flex-row justify-between items-center space-y-6 md:space-y-0">
           <div className="flex flex-col items-center md:items-start space-y-4">
@@ -13,23 +14,33 @@ export default function Footer() {
                 @Barış-Yıldız
               </span>
               <div className="flex items-center">
-                <HiOutlineLocationMarker className="w-[18px] h-[18px] text-blue-400 flex-shrink-0" />
-                <span className="text-gray-400 text-sm ml-2">İstanbul/Türkiye</span>
+                <HiOutlineLocationMarker className="w-[18px] h-[18px] text-blue-400/80 flex-shrink-0" />
+                <span className="text-gray-400/80 text-sm ml-2 pt-2">İstanbul/Türkiye</span>
               </div>
-              <span className="text-gray-400 text-sm">
+              <span className="text-gray-400/80 text-sm">
                 Frontend Developer
               </span>
             </div>
             <div className="flex items-center">
-              <BiCopyright className="w-[14px] h-[14px] text-gray-500 flex-shrink-0" />
-              <span className="text-gray-500 text-xs ml-1">
+              <BiCopyright className="w-[14px] h-[14px] text-gray-500/80 flex-shrink-0" />
+              <span className="text-gray-500/80 text-xs ml-1">
                 2024 Barış Yıldız - Tüm Hakları Saklıdır
               </span>
             </div>
           </div>
-          <FooterSocial />
+
+          <div className="flex flex-col items-center space-y-4">
+            <span className="text-sm font-medium text-gray-400/80">
+              Beni Takip Edebilirsiniz
+            </span>
+            <div className="p-2">
+              <Links/>
+            </div>
+          </div>
         </div>
       </div>
     </footer>
   );
-} 
+}
+
+export default memo(Footer); 
