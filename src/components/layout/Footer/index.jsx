@@ -6,7 +6,7 @@ import Links from "../../links";
 function Footer() {
   return (
     <footer className="border-t border-gray-800/20 bg-gradient-to-b from-black/50 via-black/50 to-black/50 md:from-transparent md:via-gray-900/30 md:to-black/50 backdrop-blur-sm w-full" role="contentinfo" aria-label="Site footer">
-      <div className="container mx-auto px-6 py-8">
+      <div className="max-w-7xl mx-auto px-6 lg:px-8 py-8">
         <div className="flex flex-col md:flex-row justify-between items-center space-y-6 md:space-y-0">
           <div className="flex flex-col items-center md:items-start space-y-4">
             <div className="flex flex-col items-center md:items-start space-y-2">
