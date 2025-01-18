@@ -8,7 +8,8 @@ const Projects = () => {
         const projects = [
           { id: 1, title: "Ne Nedir Blog", img: viteimg, description: "Yazılım dilleri ve Frameworkler hakkında bilgi veriyorum", projectUrl: "https://ne-nedir.netlify.app", status: "Geliştirme Aşamasında" },
           { id: 22, title: "Proje ismi", img: code, description: "Projelerim için beklemede kalın", projectUrl: "https://github.com/username/project", status: "Yakında" },
-          ];
+          { id: 23, title: "Proje ismi", img: code, description: "Projelerim için beklemede kalın", projectUrl: "https://github.com/username/project", status: "Yakında" },
+        ];
       
         const sliderRef = useRef(null);
   const [dragLimits, setDragLimits] = useState({ left: 0, right: 0 });
