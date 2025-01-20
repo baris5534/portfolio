@@ -8,7 +8,6 @@ const Projects = () => {
         const projects = [
           { id: 1, title: "Ne Nedir Blog", img: viteimg, description: "Yazılım dilleri ve Frameworkler hakkında bilgi veriyorum", projectUrl: "https://ne-nedir.netlify.app", status: "Geliştirme Aşamasında" },
           { id: 22, title: "Proje ismi", img: code, description: "Projelerim için beklemede kalın", projectUrl: "https://github.com/username/project", status: "Yakında" },
-          { id: 23, title: "Proje ismi", img: code, description: "Projelerim için beklemede kalın", projectUrl: "https://github.com/username/project", status: "Yakında" },
         ];
       
         const sliderRef = useRef(null);
@@ -102,10 +101,10 @@ const Projects = () => {
                   </div>
                   
                   <div className="flex flex-col items-center space-y-3 mt-4">
-                    <div className="p-3 rounded-xl bg-gradient-to-b from-gray-800 to-gray-900
+                    <div className="p-3 rounded-xl select-none pointer-events-none bg-gradient-to-b from-gray-800 to-gray-900
                                   border border-gray-700/50 shadow-inner">
                       <img
-                        className="w-14 h-14 object-contain drop-shadow-2xl filter brightness-110"
+                        className="w-14 h-14 object-contain drop-shadow-2xl select-none filter brightness-110"
                         src={project.img}
                         alt={project.title}
                       />

@@ -83,7 +83,7 @@ const CardSlider = () => {
                 </div>
                 
                 <div className="flex flex-col items-center space-y-4 mt-4">
-                  <div className="p-4 rounded-xl bg-gradient-to-b from-gray-800 to-gray-900
+                  <div className="p-4 select-none pointer-events-none rounded-xl bg-gradient-to-b from-gray-800 to-gray-900
                                 border border-gray-700/50 shadow-inner">
                     <img
                       className="w-16 h-16 object-contain drop-shadow-2xl filter brightness-110"

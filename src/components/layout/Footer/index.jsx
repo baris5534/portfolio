@@ -15,7 +15,7 @@ function Footer() {
               </h2>
               <address className="flex items-center not-italic">
                 <HiOutlineLocationMarker className="w-[18px] h-[18px] text-blue-400/80 flex-shrink-0" aria-hidden="true" />
-                <span className="text-gray-400/80 text-sm ml-2">İstanbul/Türkiye</span>
+                <span className="text-gray-400/80 text-sm ml-2 mt-1.5">İstanbul/Türkiye</span>
               </address>
               <p className="text-gray-400/80 text-sm">
                 Frontend Developer
@@ -23,7 +23,7 @@ function Footer() {
             </div>
             <div className="flex items-center">
               <BiCopyright className="w-[14px] h-[14px] text-gray-500/80 flex-shrink-0" aria-hidden="true" />
-              <small className="text-gray-500/80 text-xs ml-1">
+              <small className="text-gray-500/80 text-xs ml-1 pt-1">
                 2024 Barış Yıldız - Tüm Hakları Saklıdır
               </small>
             </div>
