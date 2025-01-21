@@ -95,7 +95,7 @@ const Projects = () => {
                   <div className="absolute -top-0.5 left-1/2 transform -translate-x-1/2">
                     <div className={`px-3 py-1 rounded-b-lg border 
                                    ${getStatusStyle(project.status)}
-                                   text-xs font-medium tracking-wider uppercase`}>
+                                   text-xs text-center pt-2 font-medium tracking-wider uppercase`}>
                       {project.status}
                     </div>
                   </div>
@@ -122,7 +122,7 @@ const Projects = () => {
                                    ${project.status === "Tamamlandı" ? "bg-gradient-to-r from-emerald-500 to-green-500" :
                                      project.status === "Devam Ediyor" ? "bg-gradient-to-r from-amber-500 to-orange-500" :
                                      "bg-gradient-to-r from-indigo-500 to-blue-500"} 
-                                   opacity-50`}>
+                                   opacity-70`}>
                     </div>
                     <a
                       href={project.projectUrl}

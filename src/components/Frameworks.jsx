@@ -77,7 +77,7 @@ const CardSlider = () => {
                 <div className="absolute -top-0.5 left-1/2 transform -translate-x-1/2">
                   <div className={`px-3 py-1 rounded-b-lg border 
                                  ${getLevelStyle(card.level)}
-                                 text-xs font-medium tracking-wider uppercase`}>
+                                 text-xs font-medium text-center pt-2 tracking-wider uppercase`}>
                     {card.level}
                   </div>
                 </div>
@@ -101,7 +101,7 @@ const CardSlider = () => {
                                  ${card.level === "Profesyonel" ? "bg-gradient-to-r from-emerald-500 to-green-500" :
                                    card.level === "Orta" ? "bg-gradient-to-r from-amber-500 to-orange-500" :
                                    "bg-gradient-to-r from-indigo-500 to-blue-500"} 
-                                 opacity-50`}>
+                                 opacity-70`}>
                   </div>
                   <p className="text-sm text-center text-gray-400">
                     {card.level === "Başlangıç" ? "Öğrenme Aşamasında" : 

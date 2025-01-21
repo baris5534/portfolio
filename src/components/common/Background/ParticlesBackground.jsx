@@ -30,10 +30,10 @@ function ParticlesBackground() {
         initial={false}
         animate={{
           background: [
-            'radial-gradient(1000px circle at 100% 50%, rgba(38, 205, 231, 0.386) 0%, transparent 70%)',
-            'radial-gradient(1000px circle at 0% 50%, rgba(61, 38, 231, 0.45) 0%, transparent 70%)',
-            'radial-gradient(1000px circle at 50% 100%, rgba(231, 38, 86, 0.468) 0%, transparent 70%)',
-            'radial-gradient(1000px circle at 50% 0%, rgba(34, 16, 175, 0.357) 0%, transparent 70%)',
+            'radial-gradient(1000px circle at 100% 50%, #5c525d 0%, transparent 70%)',
+            'radial-gradient(1000px circle at 0% 50%, #6a11cb 0%, transparent 70%)',
+            'radial-gradient(1000px circle at 50% 100%, #354d6a 0%, transparent 70%)',
+            'radial-gradient(1000px circle at 50% 0%, #0b545d 0%, transparent 70%)',
           ]
         }}
         transition={{
@@ -50,8 +50,8 @@ function ParticlesBackground() {
         initial={false}
         animate={{
           background: [
-            'radial-gradient(1400px circle at 50% 50%, rgba(10, 176, 137, 0.348) 0%, transparent 70%)',
-            'radial-gradient(1400px circle at 30% 70%, rgba(0, 55, 255, 0.334) 0%, transparent 70%)',
+            'radial-gradient(1400px circle at 50% 50%, #2b2e1d 0%, transparent 70%)',
+            'radial-gradient(1400px circle at 30% 70%, #012116 0%, transparent 70%)',
             'radial-gradient(1400px circle at 70% 30%, rgba(15, 64, 177, 0.388) 0%, transparent 70%)',
           ]
         }}
