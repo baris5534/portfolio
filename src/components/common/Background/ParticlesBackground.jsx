@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 
 function ParticlesBackground() {
   return (
-    <div className="fixed inset-0 w-full h-full overflow-hidden bg-[#0f0514]">
+    <div className="fixed inset-0 w-full h-full overflow-hidden bg-[#102938]">
       {/* Ana Gradient Katmanı - Daha düşük opaklık ve daha uzun süre */}
       <motion.div
         className="absolute inset-0 z-0"
@@ -52,7 +52,7 @@ function ParticlesBackground() {
           background: [
             'radial-gradient(1400px circle at 50% 50%, #2b2e1d 0%, transparent 70%)',
             'radial-gradient(1400px circle at 30% 70%, #012116 0%, transparent 70%)',
-            'radial-gradient(1400px circle at 70% 30%, rgba(15, 64, 177, 0.388) 0%, transparent 70%)',
+            'radial-gradient(1400px circle at 70% 30%, #0d4bdbb4 0%, transparent 70%)',
           ]
         }}
         transition={{
