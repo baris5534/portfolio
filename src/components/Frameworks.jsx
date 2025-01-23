@@ -35,7 +35,7 @@ const CardSlider = () => {
   const { sliderRef, dragLimits } = useSlider();
 
   return (
-    <div className="w-full overflow-hidden py-10">
+    <div className="w-full overflow-hidden py-10 md:pr-4">
       <div className="w-full max-w-7xl mx-auto">
         <h2 className="text-2xl font-bold mb-8 px-10 max-sm:px-5 bg-gradient-to-r from-white to-gray-400 bg-clip-text text-transparent">
           Kullandığım Teknolojiler
@@ -45,7 +45,7 @@ const CardSlider = () => {
           ref={sliderRef}
           drag="x"
           dragConstraints={dragLimits}
-          className="flex gap-6 px-10 max-sm:px-5 cursor-grab active:cursor-grabbing"
+          className="flex gap-6 px-10 max-sm:px-5 cursor-grab active:cursor-grabbing mr-4"
           dragElastic={0.1}
           dragTransition={{ bounceStiffness: 600, bounceDamping: 20 }}
         >

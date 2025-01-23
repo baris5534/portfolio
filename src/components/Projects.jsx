@@ -57,7 +57,7 @@ const Projects = () => {
             ref={sliderRef}
             drag="x"
             dragConstraints={dragLimits}
-            className="flex gap-4 px-10 max-sm:px-5"
+            className="flex gap-4 px-10 max-sm:px-5 mr-4"
             style={{ 
               cursor: "grab",
             }}
