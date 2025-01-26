@@ -3,17 +3,17 @@ import { motion } from 'framer-motion';
 
 function ParticlesBackground() {
   return (
-    <div className="fixed inset-0 w-full h-full overflow-hidden bg-[#102938]">
+    <div className="fixed inset-0 w-full h-full overflow-hidden bg-[#0a0f16]">
       {/* Ana Gradient Katmanı - Daha düşük opaklık ve daha uzun süre */}
       <motion.div
         className="absolute inset-0 z-0"
         initial={false}
         animate={{
           background: [
-            'radial-gradient(1200px circle at 0% 0%, #231bb880 0%, transparent 70%)',
-            'radial-gradient(1200px circle at 100% 100%, #201bb877 0%, transparent 70%)',
-            'radial-gradient(1200px circle at 0% 100%, #1b96b826 0%, transparent 70%)',
-            'radial-gradient(1200px circle at 100% 0%, #420c948d 0%, transparent 70%)',
+            'radial-gradient(1200px circle at 0% 0%, #1f2937 0%, transparent 70%)',
+            'radial-gradient(1200px circle at 100% 100%, #111827 0%, transparent 70%)',
+            'radial-gradient(1200px circle at 0% 100%, #374151 0%, transparent 70%)',
+            'radial-gradient(1200px circle at 100% 0%, #1c1f26 0%, transparent 70%)',
           ]
         }}
         transition={{
@@ -30,10 +30,10 @@ function ParticlesBackground() {
         initial={false}
         animate={{
           background: [
-            'radial-gradient(1000px circle at 100% 50%, #00b4db 0%, transparent 70%)',
-            'radial-gradient(1000px circle at 0% 50%, #6a11cb 0%, transparent 70%)',
-            'radial-gradient(1000px circle at 50% 100%, #43c6ac 0%, transparent 70%)',
-            'radial-gradient(1000px circle at 50% 0%, #0b545d 0%, transparent 70%)',
+            'radial-gradient(1000px circle at 100% 50%, #0d3b66 0%, transparent 70%)',
+            'radial-gradient(1000px circle at 0% 50%, #112240 0%, transparent 70%)',
+            'radial-gradient(1000px circle at 50% 100%, #243b53 0%, transparent 70%)',
+            'radial-gradient(1000px circle at 50% 0%, #1b2a41 0%, transparent 70%)',
           ]
         }}
         transition={{
@@ -50,9 +50,9 @@ function ParticlesBackground() {
         initial={false}
         animate={{
           background: [
-            'radial-gradient(1400px circle at 50% 50%, #2b2e1d 0%, transparent 70%)',
-            'radial-gradient(1400px circle at 30% 70%, #012116 0%, transparent 70%)',
-            'radial-gradient(1400px circle at 70% 30%, #0d4bdbb4 0%, transparent 70%)',
+            'radial-gradient(1400px circle at 50% 50%, #0a2a4d 0%, transparent 70%)',
+            'radial-gradient(1400px circle at 30% 70%, #0e3d5a 0%, transparent 70%)',
+            'radial-gradient(1400px circle at 70% 30%, #133e53 0%, transparent 70%)',
           ]
         }}
         transition={{
@@ -64,10 +64,10 @@ function ParticlesBackground() {
       />
 
       {/* Overlay Gradient - Statik katman */}
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#0f0514]/30 to-[#0f0514]/70" />
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#0a0f16]/40 to-[#0a0e12]/80" />
     </div>
   );
 }
 
 // Gereksiz yeniden render'ları önlemek için memo kullanıyoruz
-export default memo(ParticlesBackground); 
+export default memo(ParticlesBackground);

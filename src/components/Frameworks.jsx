@@ -46,8 +46,8 @@ const CardSlider = () => {
           drag="x"
           dragConstraints={dragLimits}
           className="flex gap-6 px-10 max-sm:px-5 cursor-grab active:cursor-grabbing mr-4"
-          dragElastic={0.1}
-          dragTransition={{ bounceStiffness: 600, bounceDamping: 20 }}
+          //dragElastic={0.1}
+          //dragTransition={{ bounceStiffness: 600, bounceDamping: 20 }}
         >
           {cards.map((card) => (
             <motion.div 
@@ -58,7 +58,9 @@ const CardSlider = () => {
                          hover:border-gray-700 transition-all duration-300"
               style={{
                 minWidth: "200px",
+                maxWidth: "200px",
                 height: "300px",
+                //height: "250px",
                 display: "flex",
                 flexDirection: "column",
                 alignItems: "center",
@@ -83,19 +85,19 @@ const CardSlider = () => {
                 </div>
                 
                 <div className="flex flex-col items-center space-y-4 mt-4">
-                  <div className="p-4 select-none pointer-events-none rounded-xl bg-gradient-to-b from-gray-800 to-gray-900
+                  <div className="p-3 select-none pointer-events-none rounded-xl bg-gradient-to-b from-gray-800 to-gray-900
                                 border border-gray-700/50 shadow-inner">
                     <img
-                      className="w-16 h-16 object-contain drop-shadow-2xl filter brightness-110"
+                      className="max-w-16 max-h-16 size-14 object-contain drop-shadow-2xl filter brightness-110"
                       src={card.img}
                       alt={card.title}
                     />
                   </div>
-                  <h3 className="text-xl font-semibold text-white">{card.title}</h3>
+                  <h3 className="text-lg font-semibold text-white">{card.title}</h3>
                 </div>
               </div>
 
-              <div className="w-full p-6 bg-gray-900/50 border-t border-gray-800">
+              <div className="w-full p-5 bg-gray-900/50 border-t border-gray-800">
                 <div className="flex flex-col items-center space-y-3">
                   <div className={`h-0.5 w-16 rounded-full 
                                  ${card.level === "Profesyonel" ? "bg-gradient-to-r from-emerald-500 to-green-500" :
