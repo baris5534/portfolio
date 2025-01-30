@@ -1,4 +1,5 @@
 import { lazy, Suspense } from "react";
+import { Routes, Route } from "react-router-dom";
 import Profileimg from "./components/Profileimg";
 import Aboutme from "./components/Aboutme";
 import ParticlesBackground from './components/common/Background/ParticlesBackground';
@@ -27,7 +28,7 @@ function App() {
           <Suspense fallback={<div className="w-full h-32 flex items-center justify-center">
             <div className="animate-pulse text-white/50">Yükleniyor...</div>
           </div>}>
-            <section className="w-full py-5 ">
+            <section className="w-full py-5">
               <Frameworks/>
             </section>
             
