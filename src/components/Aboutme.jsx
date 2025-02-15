@@ -5,7 +5,7 @@ const about = ["Merhaba, Ben"]
 const name = ["Barış Yıldız"]
 const meslek = ["FrontEnd Developer'ım"]
 const  resume = ["Ben lise hayatımdan İtibaren Web arayüzüne merak sardım ve öğrenmeye başladım. kariyerimi frontend alanında geliştirmeye merak sardım ve İşimi mutluluk İle yapıyorum. yeni teknolojileri takip ederim."]
-
+const uni = ["Bandırma 17 Eylül Üniversitesi - Bilgisayar Programcılığı - 2024/?"]
 const containerVariants = {
   hidden: { opacity: 1 }, // Başlangıç durumu
   visible: {
@@ -62,6 +62,11 @@ export default function Aboutme (){
         variants={itemVariants}
       >
         {resume}
+      </motion.p>
+      <motion.p className="text-base sm:text-lg lg:text-xl leading-relaxed
+                   w-full text-center lg:text-lft" 
+        variants={itemVariants}>
+        {uni}
       </motion.p>
     </motion.div>
     <div className="flex flex-col sm:flex-row items-center justify-between
