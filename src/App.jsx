@@ -29,7 +29,7 @@ function App() {
           <Suspense fallback={<div className="w-full h-32 flex items-center justify-center">
             <div className="animate-pulse text-white/50">Yükleniyor...</div>
           </div>}>
-            <section className="w-full py-5">
+            <section className="w-full py-6">
               <Frameworks/>
             </section>
             
