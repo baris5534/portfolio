@@ -132,7 +132,7 @@ const LinksList = () => {
   ];
   
   return (
-    <div className="flex flex-row flex-wrap justify-center items-center mt-3 gap-2">
+    <div className="flex flex-row flex-wrap justify-center mx-auto items-center mt-3 gap-2">
     {links.map((link, index) => (
       <motion.span
         variants={linksVariants}

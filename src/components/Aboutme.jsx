@@ -34,7 +34,7 @@ export default function Aboutme (){
     >
       <motion.h2 
         className="text-4xl sm:text-3xl lg:text-5xl font-bold
-                   w-full text-center lg:text-left" 
+                   w-full text-center lg:text-let" 
         variants={itemVariants}
       >
         {about}
@@ -42,7 +42,7 @@ export default function Aboutme (){
       
       <motion.h1 
         className="text-3xl sm:text-5xl lg:text-7xl font-bold
-                   w-full text-center lg:text-left" 
+                   w-full text-center lg:text-lft" 
         variants={itemVariants}
       >
         {name}
@@ -50,7 +50,7 @@ export default function Aboutme (){
       
       <motion.h3 
         className="text-2xl sm:text-3xl lg:text-4xl
-                   w-full text-center lg:text-left" 
+                   w-full text-center lg:text-lft" 
         variants={itemVariants}
       >
         Ben <span className="text-white">{meslek}</span>
@@ -58,7 +58,7 @@ export default function Aboutme (){
       
       <motion.p 
         className="text-base sm:text-lg lg:text-xl leading-relaxed
-                   w-full text-center lg:text-left" 
+                   w-full text-center lg:text-lft" 
         variants={itemVariants}
       >
         {resume}

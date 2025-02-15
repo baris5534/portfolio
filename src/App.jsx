@@ -4,6 +4,7 @@ import Profileimg from "./components/Profileimg";
 import Aboutme from "./components/Aboutme";
 import ParticlesBackground from './components/common/Background/ParticlesBackground';
 import Footer from './components/layout/Footer';
+import patternBg from './assets/Pattern.png';
 
 // Lazy loading ile geç yüklenen bileşenler
 const Frameworks = lazy(() => import("./components/Frameworks"));
@@ -15,10 +16,10 @@ function App() {
       <ParticlesBackground />
       
       <div className="relative z-10">
-        <main className="container backdrop-blur-xl bg-white/0 min-h-screen mx-auto flex flex-col items-start justify-center">
-          <section className="flex flex-row max-xl:flex-col lg:flex-row lg:h-[600px] max-2xl:h-[700px] max-sm:w-full xl:h-screen items-center justify-around h-screen max-sm:h-screen max-xl:h-[950px] w-full py-5 px-10">
+        <main className="container bg-white/0 min-h-screen mx-auto flex flex-col items-start justify-center">
+          <section className="flex flex-col max-xl:flex-col lg:flex-col lg:h-[900px] max-2xl:h-[700px] max-sm:w-full xl:h-screen items-center justify-around h-screen max-sm:h-scree max-xl:h-[750px] w-full py-10 px-10" >
             <Profileimg/>
-            <article className="flex w-5/12 max-xl:w-full">
+            <article className="flex w-6/12 max-xl:w-full">
               <div className="flex flex-col">
                 <Aboutme/>
               </div>

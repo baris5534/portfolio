@@ -1,4 +1,4 @@
-import profile from "../../public/profilepp.jpg";
+import profile from "../../public/memoji2.png";
 import { motion } from "motion/react";
 
 function Profileimg() {
@@ -7,14 +7,14 @@ function Profileimg() {
       initial={{ opacity: 0, scale: 0 }}
       animate={{ opacity: 1, scale: 1 }}
       transition={{ duration: 0.5 }}
-      className="rounded-full my-3 border-[2.5px] select-none pointer-events-none border-white shadow-white/40 shadow-xl"
+      className="rounded-full my-2 select-none pointer-events-none bg-[#1A1A1a]  from-[#693B93] to-[#320F85] shadow-[#693B93] shadow-2xl"
     >
-      <div className="border-2 border-black rounded-full size-[500px] max-sm:size-[250px] lg:size-[350px] xl:size-[500px] max-lg:size-[500px]
+      <div className=" rounded-full size-[500px] max-sm:size-[250px] bg-radiel-to-tr/hsl  from-[#693B93] to-[#320F85] shadow-[#693B93] lg:size-[350px] xl:size-[300px] max-lg:size-[300px]
        max-[360px]:size-[250px] lg:aspect-radio aspect-square">
         <img
           src={profile}
           alt="profile"
-          className="w-full h-full rounded-full object-cover"
+          className="w-full h-full rounded-full bg-radiel-to-tr/hsl  from-[#693B93] to-[#320F85] shadow-[#693B93] object-cover drop-shadow-2xl"
         />
       </div>
     </motion.div>

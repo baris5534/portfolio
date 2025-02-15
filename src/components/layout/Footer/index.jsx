@@ -5,7 +5,7 @@ import Links from "../../links";
 
 function Footer() {
   return (
-    <footer className="   backdrop-blur-sm w-full" role="contentinfo" aria-label="Site footer">
+    <footer className=" w-full" role="contentinfo" aria-label="Site footer">
       <div className="max-w-7xl mx-auto px-6 lg:px-8 py-8">
         <div className="flex flex-col md:flex-row justify-between items-center space-y-6 md:space-y-0">
           <div className="flex flex-col items-center md:items-start space-y-4">
