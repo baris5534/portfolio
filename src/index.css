@@ -52,7 +52,7 @@ body {
 }
 
 /* Dalgalı efekt için overlay */
-body::before {
+/* body::before {
   content: '';
   position: fixed;
   top: 0;
@@ -64,7 +64,7 @@ body::before {
   opacity: 0.15;
   z-index: 1;
   pointer-events: none;
-}
+} */
 
 /* Sürükleme sırasında metin seçimini engelle */
 .cursor-grab {
@@ -76,11 +76,11 @@ body::before {
 .overflow-hidden::-webkit-scrollbar {
   display: none;
 }
- .bgimg{
+ /* .bgimg{
   background-image: url(./assets/Pattern.png);
   background-repeat: no-repeat;
   right: 0;
   padding: 80px;
   background-size: cover;
   overflow: hidden;
-}
+} */
