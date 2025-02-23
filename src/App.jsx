@@ -7,7 +7,7 @@ import Footer from './components/layout/Footer';
 //import patternBg from './assets/Pattern.png';
 
 // Lazy loading ile geç yüklenen bileşenler
-const Frameworks = lazy(() => import("./components/Frameworks"));
+ const Frameworks = lazy(() => import("./components/Frameworks"));
 const Projects = lazy(() => import("./components/Projects"));
 
 function App() {
@@ -26,9 +26,9 @@ function App() {
             </article>
           </section>
           
-          <Suspense fallback={<div className="w-full h-32 flex items-center justify-center">
+          {/* <Suspense fallback={<div className="w-full h-32 flex items-center justify-center">
             <div className="animate-pulse text-white/50">Yükleniyor...</div>
-          </div>}>
+          </div>}> */}
             <section className="w-full py-5">
               <Frameworks/>
             </section>
@@ -36,7 +36,7 @@ function App() {
             <section className="w-full py-3">
               <Projects/>
             </section>
-          </Suspense>
+          {/* </Suspense> */}
 
           <Footer />
         </main>

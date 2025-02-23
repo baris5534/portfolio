@@ -1,4 +1,4 @@
-import profile from "../../public/memoji2.png";
+import profile from "../assets/memoji2.png";
 import { motion } from "motion/react";
 
 function Profileimg() {
