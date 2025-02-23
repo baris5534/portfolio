@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 
 function ParticlesBackground() {
   return (
-    <div className="fixed z-10 w-full h-full overflow-hidden bg-[#000]">
+    <div className="fixed z-10 w-full h-full overflow-hidden bg-[#201c57]">
       {/* Ana Gradient Katmanı - Daha düşük opaklık ve daha uzun süre 
       <motion.div
         className="absolute inset-0 z-0"
@@ -64,7 +64,7 @@ function ParticlesBackground() {
       />
 
       {/* Overlay Gradient - Statik katman */}
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#181E41]/40 to-[#2C1250]/80"
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#201c6d]/40 to-[#2C1250]/80"
        />
     </div>
   );
