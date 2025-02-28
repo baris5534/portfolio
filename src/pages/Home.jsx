@@ -2,7 +2,7 @@ import {motion} from "motion/react";
 
 function Home (){
     return(
-        <div className="h-screen bg-red-70 w-full fixed flex items-center justify-center">
+        <div className="h-full bg-red-70 w-full fixed flex items-center justify-center">
            <div className="">
            <motion.div 
             className="size-32 bg-white rounded-full shadow-white shadow-2xl opacity-30 "

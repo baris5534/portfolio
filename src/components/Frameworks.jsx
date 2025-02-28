@@ -26,7 +26,7 @@ const CardSlider = () => {
   const cards = [
     // Örnek kartlar
     { id: 4, title: "Reactjs", img: reactimg, level: "Başlangıç" }, // -> Mavi/İndigo renk
-    { id: 5, title: "Tailwindcss", img: tailwind, level: "Profesyonel" }, // -> Yeşil renk
+    { id: 5, title: "Tailwindcss", img: tailwind, level: "Orta" }, // -> Yeşil renk
     { id: 6, title: "Framer Motion", img: framer, level: "Başlangıç" }, // -> Mavi/İndigo renk
     // Yeni ekleyeceğiniz kartlar için örnek:
     // { id: 7, title: "JavaScript", img: jsimg, level: "Orta" }, // -> Turuncu/Amber renk
@@ -35,7 +35,7 @@ const CardSlider = () => {
   const { sliderRef, dragLimits } = useSlider();
 
   return (
-    <div className="w-full overflow-hidden py-10 md:pr-4">
+    <div className="w-full overflow-hidden py-5 max-lg:mt-14 md:pr-4">
       <div className="w-full max-w-7xl mx-auto">
         <h2 className="text-2xl font-bold mb-8 px-10 max-sm:px-5 bg-gradient-to-r from-white to-gray-400 bg-clip-text text-transparent">
           Kullandığım Teknolojiler
