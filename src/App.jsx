@@ -2,7 +2,7 @@ import { lazy, Suspense } from "react";
 import { Routes, Route } from "react-router-dom";
 import Profileimg from "./components/Profileimg";
 import Aboutme from "./components/Aboutme";
-import ParticlesBackground from './components/common/Background/ParticlesBackground';
+// import ParticlesBackground from './components/common/Background/ParticlesBackground';
 import Footer from './components/layout/Footer';
 //import patternBg from './assets/Pattern.png';
 
@@ -12,10 +12,10 @@ const Projects = lazy(() => import("./components/Projects"));
 
 function App() {
   return (
-    <div className="w-screen min-h-full overflow-x-hidden font-rockwell relative">
-      <ParticlesBackground />
+    <div className="w-screen min-h-full overflow-x-hidden font-poppins relative bg-black">
+      {/* <ParticlesBackground /> */}
       
-      <div className="relative z-10">
+      <div className="relative z-10 bgimg">
         <main className="container bg-white/0 min-h-full mx-auto flex flex-col items-start justify-center">
           <section className="flex flex-col max-xl:flex-col lg:flex-col lg:h-[900px] max-2xl:h-[700px] max-sm:w-full xl:h-full items-center justify-around h-full max-xl:h-[750px] w-full py-6 px-10" >
             <Profileimg/>

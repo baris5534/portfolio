@@ -23,7 +23,7 @@ const itemVariants = {
 };
 export default function Aboutme (){
     return(
-      <div className="w-full *:space-y-5 mt-2 select-none px-4 md:px-6 lg:px-8 text-white">
+      <div className="w-full *:space-y-5 mt-2 select-none px-4 md:px-6 lg:px-8 text-[#e1e1e1]">
       <motion.div
       className="flex flex-col justify-center items-center 
                      min-h-[300px] w-full
@@ -42,7 +42,7 @@ export default function Aboutme (){
       
       <motion.h1 
         className="text-3xl sm:text-5xl lg:text-7xl font-bold
-                   w-full text-center lg:text-lft" 
+                   w-full text-center lg:text-lft bg-gradient-to-r text-transparent from-[#9C83FF] to-[#FF9051] bg-clip-text" 
         variants={itemVariants}
       >
         {name}
@@ -53,7 +53,7 @@ export default function Aboutme (){
                    w-full text-center lg:text-lft" 
         variants={itemVariants}
       >
-        Ben <span className="text-white">{meslek}</span>
+        Ben <span className=" bg-gradient-to-r  text-transparent from-[#9C83FF] to-[#FF9051] bg-clip-text">{meslek}</span>
       </motion.h3>
       
       <motion.p 

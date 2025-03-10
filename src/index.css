@@ -28,14 +28,14 @@ html, body {
   overflow-x: hidden;
 }
 
-body {
+/* body {
   background-image: url('./assets/Pattern.png');
   background-position: center center;
   background-repeat: no-repeat;
-  background-size: 100vw 100vh; /* Viewport'a göre tam boyut */
+  background-size: 100vw 100vh; /* Viewport'a göre tam boyut 
   background-attachment: fixed;
   position: relative;
-}
+} */
 
 #root {
   min-height: 100vh;
@@ -76,11 +76,21 @@ body {
 .overflow-hidden::-webkit-scrollbar {
   display: none;
 }
- /* .bgimg{
-  background-image: url(./assets/Pattern.png);
+.bgimg{
+  background-image: url(../public/Pattern.png);
   background-repeat: no-repeat;
-  right: 0;
+   right: ;
   padding: 80px;
   background-size: cover;
   overflow: hidden;
-} */
+}
+@media only screen and (max-width: 600px) {
+  .bgimg {
+    background-image: url(../public/Pattern.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 40%;
+    overflow: hidden;
+    padding: 0;
+  }
+}
