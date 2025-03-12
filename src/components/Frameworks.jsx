@@ -97,8 +97,8 @@ const CardSlider = () => {
                 </div>
               </div>
 
-              <div className="w-full p-5 bg-gray-900/50 border-t border-gray-800">
-                <div className="flex flex-col items-center space-y-3">
+              <div className="w-full p-5 h-[80px] bg-gray-900/50 border-t border-gray-800">
+                <div className="flex h-[80px] flex-col items-center space-y-3">
                   <div className={`h-0.5 w-16 rounded-full 
                                  ${card.level === "Profesyonel" ? "bg-gradient-to-r from-emerald-500 to-green-500" :
                                    card.level === "Orta" ? "bg-gradient-to-r from-amber-500 to-orange-500" :

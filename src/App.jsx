@@ -12,7 +12,7 @@ const Projects = lazy(() => import("./components/Projects"));
 
 function App() {
   return (
-    <div className="w-screen min-h-full overflow-x-hidden font-poppins relative bg-black">
+    <div className="w-screen min-h-full overflow-x-hidden font-poppins font-poppinsSemiBold relative bg-black">
       {/* <ParticlesBackground /> */}
       
       <div className="relative z-10 bgimg">

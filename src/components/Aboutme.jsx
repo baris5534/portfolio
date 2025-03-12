@@ -57,13 +57,13 @@ export default function Aboutme (){
       </motion.h3>
       
       <motion.p 
-        className="text-base sm:text-lg lg:text-xl leading-relaxed
+        className="text-base font-poppinsSemiBold sm:text-lg lg:text-xl leading-relaxed
                    w-full text-center lg:text-lft" 
         variants={itemVariants}
       >
         {resume}
       </motion.p>
-      <motion.p className="text-base sm:text-lg lg:text-xl leading-relaxed
+      <motion.p className="text-base font-poppinsSemiBold sm:text-lg lg:text-xl leading-relaxed
                    w-full text-center lg:text-lft" 
         variants={itemVariants}>
         {uni}
