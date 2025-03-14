@@ -1,6 +1,8 @@
 {
-  "name": "MyWebSite",
-  "short_name": "MySite",
+  "name": "Barış Yıldız",
+  "short_name": "Barış Yıldız",
+  "description": "Barış Yıldız'ın kişisel web sitesi",
+  "start_url": "/",
   "icons": [
     {
       "src": "/web-app-manifest-192x192.png",
