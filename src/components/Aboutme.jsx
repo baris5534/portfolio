@@ -23,9 +23,9 @@ const itemVariants = {
 };
 export default function Aboutme (){
     return(
-      <div className="w-full *:space-y-5 mt-2 select-none px-4 md:px-6 lg:px-8 text-[#e1e1e1]">
+      <div className="w-full *:space-y-5 mt-2  px-4 md:px-6 lg:px-8 text-[#e1e1e1]">
       <motion.div
-      className="flex flex-col justify-center items-center 
+      className="flex flex-col select-none justify-center items-center 
                      min-h-[300px] w-full
                      space-y-3 md:space-y-4 lg:space-y-6"
       variants={containerVariants}
