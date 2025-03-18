@@ -23,11 +23,11 @@ const itemVariants = {
 };
 export default function Aboutme (){
     return(
-      <div className="w-full *:space-y-5 mt-2  px-4 md:px-6 lg:px-8 text-[#e1e1e1]">
+      <div className="w-full max-sm:*:space-y- mt-4 py-7 px-4 md:px-6 lg:px-8 text-[#e1e1e1]">
       <motion.div
       className="flex flex-col select-none justify-center items-center 
                      min-h-[300px] w-full
-                     space-y-3 md:space-y-4 lg:space-y-6"
+                     space-y-3 md:space-y-4 lg:space-y-6 xl:space-y-7"
       variants={containerVariants}
       initial="hidden"
       animate="visible"
@@ -41,7 +41,7 @@ export default function Aboutme (){
       </motion.h2>
       
       <motion.h1 
-        className="text-3xl sm:text-5xl lg:text-7xl font-bold
+        className="text-4xl sm:text-5xl lg:text-7xl font-bold
                    w-full text-center lg:text-lft bg-gradient-to-r text-transparent from-[#9C83FF] to-[#FF9051] bg-clip-text" 
         variants={itemVariants}
       >
@@ -63,7 +63,7 @@ export default function Aboutme (){
       >
         {resume}
       </motion.p>
-      <motion.p className="text-base font-poppinsSemiBold sm:text-lg lg:text-xl leading-relaxed
+      <motion.p className="text-base font-poppinsSemiBold sm:text-lg lg:text-xl leading-relaxed bg-gradient-to-r text-transparent from-[#9C83FF] to-[#FF9051] bg-clip-text
                    w-full text-center lg:text-lft" 
         variants={itemVariants}>
         {uni}

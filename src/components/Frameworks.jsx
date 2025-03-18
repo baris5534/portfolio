@@ -35,7 +35,7 @@ const CardSlider = () => {
   const { sliderRef, dragLimits } = useSlider();
 
   return (
-    <div className="w-full overflow-hidden py-5  max-lg:mt-20 md:pr-4">
+    <div className="w-full overflow-hidden py-5  max-lg:mt-20 max-sm:mt-0 sm:mt-0 md:pr-4">
       <div className="w-full max-w-7xl mx-auto">
         <h2 className="text-2xl font-bold mb-8 px-10 max-sm:px-5 bg-gradient-to-r from-white to-gray-400 bg-clip-text text-transparent">
           Kullandığım Teknolojiler

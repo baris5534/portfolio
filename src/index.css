@@ -79,8 +79,7 @@ html, body {
 .bgimg{
   background-image: url(../public/Pattern.png);
   background-repeat: no-repeat;
-   right: ;
-  padding: 80px;
+  padding: 80p;
   background-size: cover;
   overflow: hidden;
 }
