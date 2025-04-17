@@ -1,7 +1,7 @@
 import { useState, useRef, useEffect } from "react";
 import { motion } from "framer-motion";
-import code from "/favicon.svg";
-import viteimg from "/vite.svg";
+import code from "/code.png";
+import nenedir from "/favicon.svg";
 
 const Projects = () => {
     
