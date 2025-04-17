@@ -1,6 +1,6 @@
 import { useState, useRef, useEffect } from "react";
 import { motion } from "framer-motion";
-import code from "/code.png";
+import code from "/favicon.svg";
 import viteimg from "/vite.svg";
 
 const Projects = () => {
