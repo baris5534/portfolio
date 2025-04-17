@@ -6,7 +6,7 @@ import nenedir from "/favicon.svg";
 const Projects = () => {
     
         const projects = [
-          { id: 1, title: "Ne Nedir Blog", img: viteimg, description: "Yazılım dilleri ve Frameworkler hakkında bilgi veriyorum", projectUrl: "https://ne-nedir.netlify.app", status: "Tamamlandı" },
+          { id: 1, title: "Ne Nedir Blog", img: nenedir, description: "Yazılım dilleri ve Frameworkler hakkında bilgi veriyorum", projectUrl: "https://ne-nedir.netlify.app", status: "Tamamlandı" },
           { id: 22, title: "Proje ismi", img: code, description: "Projelerim için beklemede kalın", projectUrl: "https://github.com/username/project", status: "Yakında" },
         ];
       
