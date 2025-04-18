@@ -8,7 +8,7 @@ const Projects = () => {
     
         const projects = [
           { id: 1, title: "Ne Nedir Blog", img: nenedir, description: "Yazılım dilleri ve Frameworkler hakkında bilgi veriyorum", projectUrl: "https://ne-nedir.netlify.app", status: "Tamamlandı" },
-          { id: 2, title: "Hesap Makinesi", img: calculator, description: "React ile yapılmış basit bir hesap makinesi", projectUrl: "https://calculatorapp-bay.vercel.app", status: "Tamamlandı" },
+          { id: 2, title: "Hesap Makinesi", img: calculator, description: "Vue ile yapılmış basit bir hesap makinesi", projectUrl: "https://calculatorapp-bay.vercel.app", status: "Tamamlandı" },
           { id: 22, title: "Proje ismi", img: code, description: "Projelerim için beklemede kalın", projectUrl: "https://github.com/username/project", status: "Yakında" },
         ];
       
