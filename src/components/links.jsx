@@ -86,7 +86,7 @@ const LinksList = () => {
     },
     {
       name: "Mail",
-      url: "mailto:samsuncrsmb55@gmail.com",
+      url: "mailto: barisyildiz.dev@gmail.com",
       svg:(<svg
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 48 48"
