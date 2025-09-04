@@ -1,22 +1,48 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: [
-    "./index.html",
-    "./src/**/*.{js,ts,jsx,tsx}",
-  ],
+  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
       fontFamily: {
         montserrat: ["'Montserrat'", "sans-serif"], // Montserrat font ailesi
-        rockwell: ['Rockwell', 'serif'],
-        caveat :['Caveat', 'cursive'],
-        poppins: ['Poppins', 'sans-serif'],
-        newrocker: ['New Rocker', 'cursive'],
-        pirateone: ['Pirate One', 'cursive'],
-        roboto: ['Roboto', 'sans-serif'],
-        lobster: ['Lobster', 'cursive'],
+        rockwell: ["Rockwell", "serif"],
+        caveat: ["Caveat", "cursive"],
+        poppins: ["Poppins", "sans-serif"],
+        newrocker: ["New Rocker", "cursive"],
+        pirateone: ["Pirate One", "cursive"],
+        roboto: ["Roboto", "sans-serif"],
+        lobster: ["Lobster", "cursive"],
       },
-      
+      animation: {
+        marquee: "marquee var(--duration, 30s) linear infinite",
+        spotlight: "spotlight 2s ease .75s 1 forwards",
+        orbit: "orbit calc(var(--duration)*1s) linear infinite",
+      },
+      keyframes: {
+        orbit: {
+          "0%": {
+            transform:
+              "rotate(0deg) translateY(calc(var(--radius) * 1px)) rotate(0deg)",
+          },
+          "100%": {
+            transform:
+              "rotate(360deg) translateY(calc(var(--radius) * 1px)) rotate(-360deg)",
+          },
+        },
+        marquee: {
+          to: { transform: "translateX(-50%)" },
+        },
+        spotlight: {
+          "0%": {
+            opacity: 0,
+            transform: "translate(-72%, -62%) scale(0.5)",
+          },
+          "100%": {
+            opacity: 1,
+            transform: "translate(-50%,-40%) scale(1)",
+          },
+        },
+      },
       fontWeight: {
         montserratThin: 100,
         montserratExtraLight: 200,
@@ -65,11 +91,11 @@ export default {
         lobsterBlack: 900,
       },
       colors: {
-        'darkmossgreen': "#2B2E1D",
-        'paletaupe': "#D7C6B7",
+        darkmossgreen: "#2B2E1D",
+        paletaupe: "#D7C6B7",
       },
     },
-    },
+  },
   plugins: [],
-}
+};
 

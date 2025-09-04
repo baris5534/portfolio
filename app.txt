@@ -1,0 +1,106 @@
+import { lazy, useEffect } from "react";
+import { motion } from "motion/react";
+import { cn } from "./lib/utils";
+
+import Profileimg from "./components/Profileimg";
+import Aboutme from "./components/Aboutme";
+import Footer from "./components/layout/Footer";
+// import { CpuArchitecture } from "./components/cpu-architecture";
+// import İnperactiveCloud from "./components/interactive-cloud"; y
+// import { MarqueeDemo } from "./components/marquee1"; //y
+// import ShootingCom from "./components/shoting-com"; //y
+// import Orbiting from "./components/OrbitingCirclesDemo"; //y
+// import { renderCanvas } from "./components/canvas"; //y
+// import {LavaLamp} from "./components/common/Background/fluid-blob"; //y
+// import { BackgroundPaths } from "./components/background-pattern"; //y
+// import Bgcp from "./components/lightrays"; //x
+// import Aurora from "./components/aurora"; //x
+// import Galaxy from "./components/galaxy"; //x
+// import { BackgroundBeams } from "./components/background-beams"; x
+// import ParticlesBackground from './components/common/Background/ParticlesBackground'; //x
+// import { Spotlight } from "./components/spotlight"; //x
+// import LavaLamp from "./components/lamp"; //
+// import LampContainer from "./components/lamp-container"; //
+// Lazy loading ile geç yüklenen bileşenler
+const Frameworks = lazy(() => import("./components/Frameworks"));
+const Projects = lazy(() => import("./components/Projects"));
+
+function App() {
+  // useEffect(() => {
+  //   renderCanvas();
+  // }, []);
+  // use effect ile canvas render edilecek
+
+  return (
+    <div className="w-screen min-h-full overflow-x-hidden font-poppins font-poppinsSemiBold relative bg-black bg-ransparent">
+       {/* <Aurora /> gradient gökkuşağı tarzı arka plan */}
+      {/* <BackgroundBeams /> çizgisel aşağı doğru meteor kayması */}
+      <CpuArchitecture />
+      <LavaLamp /> {/* sıvı lamba efekti */}
+      {/* <Bgcp /> ışınlar aşağı doğru */}
+      {/* <MarqueeDemo /> logoların sağa sola kayması */}
+      {/* <İnperactiveCloud /> etkileşimli bulut logolar etrafta dönüyor */}
+      {/* <Galaxy /> galaksi yıldızlar arka plan */}
+      {/* <ParticlesBackground /> partiküller gradient arka plan */}
+      {/* <Orbiting />  gezegen gibi yazı yörüngesinin etrafında dönen logolar */}
+      {/* <ShootingCom /> yıldız kayması meteor tarzı */}
+      {/* <BackgroundPaths title="Hoş Geldiniz" /> arka planda yazının etrafında yukarıdan aşağı gezen çizgiler */}
+      {/* <div
+        className={cn(
+          "pointer-events-none absolute inset-0 [background-size:40px_40px] select-none",
+          "[background-image:linear-gradient(to_right,#171717_1px,transparent_1px),linear-gradient(to_bottom,#171717_1px,transparent_1px)]",
+        )}
+      /> */}
+      {/* <LavaLamp /> */}
+      {/* <Spotlight className="-top-40 left-0 md:-top-20 md:left-60" fill="white" /> sahne ışığı soldan efekti */}
+      <div className="relative z-10 mx-auto w-full max-w-7xl p-4 pt-20 md:pt-0"></div>
+      <div className="relative z-10 bimg">
+        <main className="container bg-white/0 min-h-full mx-auto flex flex-col items-start justify-center">
+          <section className="flex flex-col max-xl:flex-col lg:flex-col lg:h-[900px] max-2xl:h-[700px] max-lg:h-[820px] max-sm:w-full xl:h-[900px] items-center justify-aroun h-full max-l:h-[750px] w-full py-6 px-10">
+            {/* <LampContainer>
+            <motion.h1
+              initial={{ opacity: 0.5, y: 100 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{
+                delay: 0.3,
+                duration: 0.8,
+                ease: "easeInOut",
+              }}
+              className="mt-8 bg-gradient-to-br from-slate-300 to-slate-500 py-4 bg-clip-text text-center text-4xl font-medium tracking-tight text-transparent md:text-7xl"
+            >
+              
+            </motion.h1>
+          </LampContainer> */}
+
+            <Profileimg />
+            <article className="flex w-6/12 max-xl:w-full">
+              <div className="flex flex-col">
+                <Aboutme />
+              </div>
+            </article>
+          </section>
+          {/* <Suspense fallback={<div className="w-full h-32 flex items-center justify-center">
+            <div className="animate-pulse text-white/50">Yükleniyor...</div>
+          </div>}> */}
+          <section className="w-full">
+            <Frameworks />
+          </section>
+
+          <section className="w-full py-3">
+            <Projects />
+          </section>
+          {/* </Suspense> */}
+
+          <Footer />
+        </main>
+      </div>
+      {/* canvas arka plan olarak burada / mouse u takip eden renkler */}
+      {/* <canvas
+        className="bg-skin-base pointer-events-none absolute inset-0 mx-auto"
+        id="canvas"
+      ></canvas> */}
+    </div>
+  );
+}
+
+export default App;
