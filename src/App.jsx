@@ -8,7 +8,7 @@ import Footer from "./components/layout/Footer";
 
 
 import { MarqueeDemo } from "./components/marquee1"; //y
-import { renderCanvas } from "./components/canvas"; //y
+// import { renderCanvas } from "./components/canvas"; //y
 import {LavaLamp} from "./components/common/Background/fluid-blob"; //y
 
 // Lazy loading ile geç yüklenen bileşenler
@@ -16,12 +16,12 @@ const Frameworks = lazy(() => import("./components/Frameworks"));
 const Projects = lazy(() => import("./components/Projects"));
 
 function App() {
-  useEffect(() => {
-    renderCanvas();
-  }, []);
+  // useEffect(() => {
+  //   renderCanvas();
+  // }, []);
 
   return (
-    <div className="w-screen min-h-full overflow-x-hidden font-poppins font-poppinsSemiBold relative bg-black bg-transparent">
+    <div className="w-screen min-h-full overflow-x-hidden font-montserrat font-poppinsSemiBold relative bg-black bg-transparent">
      
       <LavaLamp />
 
@@ -49,10 +49,10 @@ function App() {
           <Footer />
         </main>
       </div>
-      <canvas
+      {/* <canvas
         className="bg-skin-base pointer-events-none fixed inset-0 mx-auto"
         id="canvas"
-      ></canvas>
+      ></canvas> */}
     </div>
   );
 }
