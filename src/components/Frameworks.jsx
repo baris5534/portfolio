@@ -1,16 +1,13 @@
-//import { useRef, useEffect, useState } from "react";
+import { memo, useMemo } from "react";
 import { motion } from "framer-motion";
-// import html from "/html.png";
-// import css from "/css.png";
-// import js from "/js.png";
 import reactimg from "/react.svg";
 import tailwind from "/Tailwindcss.png";
 import framer from "/framer.svg";
 import { useSlider } from "../hooks/useSlider";
 
-const CardSlider = () => {
-  // Level badge renklerini belirleyelim
-  const getLevelStyle = (level) => {
+const CardSlider = memo(() => {
+  // Level badge renklerini belirleyelim - useMemo ile optimize et
+  const getLevelStyle = useMemo(() => (level) => {
     switch(level) {
       case "Başlangıç":
         return "bg-indigo-500/10 text-indigo-400 border-indigo-500/20";
@@ -21,16 +18,16 @@ const CardSlider = () => {
       default:
         return "bg-blue-500/10 text-blue-400 border-blue-500/20";
     }
-  };
+  }, []);
 
-  const cards = [
+  const cards = useMemo(() => [
     // Örnek kartlar
     { id: 4, title: "Reactjs", img: reactimg, level: "Başlangıç" }, // -> Mavi/İndigo renk
     { id: 5, title: "Tailwindcss", img: tailwind, level: "Orta" }, // -> Yeşil renk
     { id: 6, title: "Framer Motion", img: framer, level: "Başlangıç" }, // -> Mavi/İndigo renk
     // Yeni ekleyeceğiniz kartlar için örnek:
     // { id: 7, title: "JavaScript", img: jsimg, level: "Orta" }, // -> Turuncu/Amber renk
-  ];
+  ], []);
 
   const { sliderRef, dragLimits } = useSlider();
 
@@ -118,6 +115,6 @@ const CardSlider = () => {
       </div>
     </div>
   );
-};
+});
 
 export default CardSlider;

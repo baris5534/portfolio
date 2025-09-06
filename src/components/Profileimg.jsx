@@ -1,7 +1,8 @@
+import { memo } from "react";
 import profile from "../assets/memoji2.png";
 import { motion } from "motion/react";
 
-function Profileimg() {
+const Profileimg = memo(() => {
   return (
     <motion.div
       initial={{ opacity: 0, scale: 0 }}
@@ -19,6 +20,6 @@ function Profileimg() {
       </div>
     </motion.div>
   );
-}
+});
 
 export default Profileimg;

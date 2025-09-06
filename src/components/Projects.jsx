@@ -1,16 +1,16 @@
-import { useState, useRef, useEffect } from "react";
+import { useState, useRef, useEffect, memo, useMemo } from "react";
 import { motion } from "framer-motion";
 import code from "/code.png";
 import nenedir from "/favicon.svg";
 import calculator from "/calculatorDark.png";
 
-const Projects = () => {
+const Projects = memo(() => {
     
-        const projects = [
+        const projects = useMemo(() => [
           { id: 1, title: "Ne Nedir Blog", img: nenedir, description: "Yazılım dilleri ve Frameworkler hakkında bilgi veriyorum", projectUrl: "https://ne-nedir.netlify.app", status: "Tamamlandı" },
           { id: 2, title: "Hesap Makinesi", img: calculator, description: "Vue ile yapılmış basit bir hesap makinesi", projectUrl: "https://calculatorapp-zeta.vercel.app", status: "Tamamlandı" },
           { id: 22, title: "Proje ismi", img: code, description: "Projelerim için beklemede kalın", projectUrl: "https://github.com/username/project", status: "Yakında" },
-        ];
+        ], []);
       
         const sliderRef = useRef(null);
   const [dragLimits, setDragLimits] = useState({ left: 0, right: 0 });
@@ -34,8 +34,8 @@ const Projects = () => {
     return () => window.removeEventListener("resize", calculateDragLimits);
   }, []);
 
-  // Status badge renklerini belirleyelim
-  const getStatusStyle = (status) => {
+  // Status badge renklerini belirleyelim - useMemo ile optimize et
+  const getStatusStyle = useMemo(() => (status) => {
     switch(status) {
       case "Tamamlandı":
         return "bg-emerald-500/10 text-emerald-400 border-emerald-500/20";
@@ -46,7 +46,7 @@ const Projects = () => {
       default:
         return "bg-blue-500/10 text-blue-400 border-blue-500/20";
     }
-  };
+  }, []);
 
   return (
     <div className="w-full overflow-hidden py-10">
@@ -160,7 +160,7 @@ const Projects = () => {
       </div>
     </div>
   );
-};
+});
 
 
 export default Projects;

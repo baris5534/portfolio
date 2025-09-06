@@ -1,4 +1,4 @@
-import React, { useRef, useMemo } from "react";
+import React, { useRef, useMemo, memo } from "react";
 import { Canvas, useFrame, useThree } from "@react-three/fiber";
 import * as THREE from "three";
 
@@ -106,7 +106,7 @@ void main() {
 }
 `;
 
-function LavaLampShader() {
+const LavaLampShader = memo(() => {
   const meshRef = useRef();
   const { size } = useThree();
 
@@ -150,9 +150,9 @@ function LavaLampShader() {
       />
     </mesh>
   );
-}
+});
 
-export const LavaLamp = () => {
+export const LavaLamp = memo(() => {
   return (
     <div
       style={{
@@ -173,10 +173,16 @@ export const LavaLamp = () => {
           position: [0, 0, 2],
         }}
         orthographic
-        gl={{ antialias: true }}
+        gl={{ 
+          antialias: false, // Antialias'ı kapatarak performansı artır
+          powerPreference: "high-performance",
+          alpha: false
+        }}
+        dpr={[1, 2]} // DPR'ı sınırla
+        performance={{ min: 0.5 }} // Performans düştüğünde kaliteyi düşür
       >
         <LavaLampShader />
       </Canvas>
     </div>
   );
-};
+});

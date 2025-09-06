@@ -1,4 +1,4 @@
-//import {useState} from "react";
+import { memo, useMemo } from "react";
 import { motion } from "motion/react"
 import Links from "./links"
 const about = ["Merhaba Ben"]
@@ -6,6 +6,7 @@ const name = ["Barış Yıldız"]
 const meslek = ["FrontEnd Developer'ım"]
 const  resume = ["Ben lise hayatımdan İtibaren Web arayüzüne merak sardım ve öğrenmeye başladım. Kariyerimi frontend alanında geliştirmeye merak sardım ve işimi mutluluk ile yapıyorum. Yeni teknolojileri takip ederim."]
 const uni = ["Bandırma 17 Eylül Üniversitesi - Bilgisayar Programcılığı - 2024/?"]
+
 const containerVariants = {
   hidden: { opacity: 1 }, // Başlangıç durumu
   visible: {
@@ -19,9 +20,8 @@ const containerVariants = {
 const itemVariants = {
   hidden: { opacity: 0, y: -50 }, // Yukarıdan başlar
   visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
-
 };
-export default function Aboutme (){
+const Aboutme = memo(() => {
     return (
       <div className="w-full mt-4 py-7 px-4 md:px-6 lg:px-8 text-[#e1e1e1]">
         <motion.div
@@ -82,4 +82,6 @@ export default function Aboutme (){
         </div>
       </div>
     );
-}
+});
+
+export default Aboutme;

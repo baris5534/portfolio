@@ -1,3 +1,4 @@
+import { memo, useMemo } from "react";
 import { div, html } from "motion/react-client";
 import { Marquee } from "./marquee";
 
@@ -230,8 +231,7 @@ const Logos = {
         xmlns="http://www.w3.org/2000/svg"
         x="0px"
         y="0px"
-        width="100"
-        height="100"
+        className="h-[30px] fill-primary"
         viewBox="0 0 48 48"
       >
         <path fill="#ffd600" d="M6,42V6h36v36H6z"></path>
@@ -255,8 +255,8 @@ const Logos = {
   ),
 };
 
-export function MarqueeDemo() {
-  const arr = [Logos.js, Logos.css,Logos.excel, Logos.html, Logos.tailwindcss, Logos.framer, Logos.nextjs, Logos.react, Logos.vscode];
+export const MarqueeDemo = memo(() => {
+  const arr = useMemo(() => [Logos.js, Logos.css,Logos.excel, Logos.html, Logos.tailwindcss, Logos.framer, Logos.nextjs, Logos.react, Logos.vscode], []);
 
   return (
     <Marquee>
@@ -270,4 +270,4 @@ export function MarqueeDemo() {
       ))}
     </Marquee>
   );
-}
+});
