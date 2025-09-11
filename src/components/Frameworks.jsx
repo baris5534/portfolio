@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import reactimg from "/react.svg";
 import tailwind from "/Tailwindcss.png";
 import framer from "/framer.svg";
+import excel from "/excel.svg";
 import { useSlider } from "../hooks/useSlider";
 
 const CardSlider = memo(() => {
@@ -22,6 +23,7 @@ const CardSlider = memo(() => {
 
   const cards = useMemo(() => [
     // Örnek kartlar
+    { id: 3, title: "Excel", img: excel, level: "Başlangıç" }, // -> Yeşil renk
     { id: 4, title: "Reactjs", img: reactimg, level: "Başlangıç" }, // -> Mavi/İndigo renk
     { id: 5, title: "Tailwindcss", img: tailwind, level: "Orta" }, // -> Yeşil renk
     { id: 6, title: "Framer Motion", img: framer, level: "Başlangıç" }, // -> Mavi/İndigo renk
@@ -37,7 +39,7 @@ const CardSlider = memo(() => {
         <h2 className="text-2xl font-bold mb-8 px-10 max-sm:px-5 bg-gradient-to-r from-white to-gray-400 bg-clip-text text-transparent">
           Kullandığım Teknolojiler
         </h2>
-        
+
         <motion.div
           ref={sliderRef}
           drag="x"
@@ -47,12 +49,12 @@ const CardSlider = memo(() => {
           //dragTransition={{ bounceStiffness: 600, bounceDamping: 20 }}
         >
           {cards.map((card) => (
-            <motion.div 
+            <motion.div
               key={card.id}
-              className="relative bg-gradient-to-b from-gray-900 to-gray-800 
-                         border border-gray-800 rounded-2xl overflow-hidden
-                         shadow-xl backdrop-blur-sm
-                         hover:border-gray-700 transition-all duration-300"
+              className="relative bg-white/10 backdrop-blur-lg
+                           border border-white/20 rounded-2xl overflow-hidden
+                           shadow-xl 
+                           hover:border-white/30 transition-all duration-300"
               style={{
                 minWidth: "200px",
                 maxWidth: "200px",
@@ -66,46 +68,59 @@ const CardSlider = memo(() => {
               }}
               initial={{ scale: 0.9, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
-              whileHover={{ 
+              whileHover={{
                 scale: 1.02,
-                boxShadow: "0 8px 30px rgba(0,0,0,0.2)"
+                boxShadow: "0 8px 30px rgba(0,0,0,0.2)",
               }}
               transition={{ type: "spring", stiffness: 300 }}
             >
               <div className="w-full pt-8 px-6">
                 <div className="absolute -top-0.5 left-1/2 transform -translate-x-1/2">
-                  <div className={`px-3 py-1 rounded-b-lg border 
+                  <div
+                    className={`px-3 py-1 rounded-b-lg border 
                                  ${getLevelStyle(card.level)}
-                                 text-xs font-medium text-center pt-2 tracking-wider uppercase`}>
+                                 text-xs font-medium text-center pt-2 tracking-wider uppercase`}
+                  >
                     {card.level}
                   </div>
                 </div>
-                
+
                 <div className="flex flex-col items-center space-y-4 mt-4">
-                  <div className="p-3 select-none pointer-events-none rounded-xl bg-gradient-to-b from-gray-800 to-gray-900
-                                border border-gray-700/50 shadow-inner">
+                  <div
+                    className="p-3 select-none pointer-events-none bg-transparent drop-shadow-2xl
+                                border border-gray-700/50 shadow-inner rounded-xl"
+                  >
                     <img
                       className="max-w-16 max-h-16 size-14 object-contain drop-shadow-2xl filter brightness-110"
                       src={card.img}
                       alt={card.title}
                     />
                   </div>
-                  <h3 className="text-lg font-semibold text-white">{card.title}</h3>
+                  <h3 className="text-lg font-semibold text-white">
+                    {card.title}
+                  </h3>
                 </div>
               </div>
 
-              <div className="w-full p-5 h-[80px] bg-gray-900/50 border-t border-gray-800">
+              <div className="w-full p-5 h-[80px] backdrop-blur-sm bg-transparent shadow-lg border-t border-gray-800">
                 <div className="flex h-[80px] flex-col items-center space-y-3">
-                  <div className={`h-0.5 w-16 rounded-full 
-                                 ${card.level === "Profesyonel" ? "bg-gradient-to-r from-emerald-500 to-green-500" :
-                                   card.level === "Orta" ? "bg-gradient-to-r from-amber-500 to-orange-500" :
-                                   "bg-gradient-to-r from-indigo-500 to-blue-500"} 
-                                 opacity-70`}>
-                  </div>
+                  <div
+                    className={`h-0.5 w-16 rounded-full 
+                                 ${
+                                   card.level === "Profesyonel"
+                                     ? "bg-gradient-to-r from-emerald-500 to-green-500"
+                                     : card.level === "Orta"
+                                     ? "bg-gradient-to-r from-amber-500 to-orange-500"
+                                     : "bg-gradient-to-r from-indigo-500 to-blue-500"
+                                 } 
+                                 opacity-70`}
+                  ></div>
                   <p className="text-sm text-center text-gray-400">
-                    {card.level === "Başlangıç" ? "Öğrenme Aşamasında" : 
-                     card.level === "Orta" ? "Aktif Kullanıyorum" : 
-                     "Uzman Seviye"}
+                    {card.level === "Başlangıç"
+                      ? "Öğrenme Aşamasında"
+                      : card.level === "Orta"
+                      ? "Aktif Kullanıyorum"
+                      : "Uzman Seviye"}
                   </p>
                 </div>
               </div>
