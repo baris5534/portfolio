@@ -4,6 +4,9 @@ import reactimg from "/react.svg";
 import tailwind from "/Tailwindcss.png";
 import framer from "/framer.svg";
 import excel from "/excel.svg";
+import figma from "/figma-icon.svg"
+import framerps from "/framerps.svg"
+import nextjs from "/nextjs.svg"
 import { useSlider } from "../hooks/useSlider";
 
 const CardSlider = memo(() => {
@@ -27,6 +30,9 @@ const CardSlider = memo(() => {
     { id: 4, title: "Reactjs", img: reactimg, level: "Başlangıç" }, // -> Mavi/İndigo renk
     { id: 5, title: "Tailwindcss", img: tailwind, level: "Orta" }, // -> Yeşil renk
     { id: 6, title: "Framer Motion", img: framer, level: "Başlangıç" }, // -> Mavi/İndigo renk
+    { id: 8, title: "Figma", img: figma, level: "Başlangıç" }, // -> Turuncu/Amber renk
+    { id: 2, title: "Framer", img: framerps, level: "Başlangıç" }, // -> Mavi/İndigo renk
+    { id: 1, title: "Nextjs", img: nextjs, level: "Başlangıç" }, // -> Mavi/İndigo renk
     // Yeni ekleyeceğiniz kartlar için örnek:
     // { id: 7, title: "JavaScript", img: jsimg, level: "Orta" }, // -> Turuncu/Amber renk
   ], []);
