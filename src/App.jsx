@@ -4,8 +4,8 @@ import Profileimg from "./components/Profileimg";
 import Aboutme from "./components/Aboutme";
 import Footer from "./components/layout/Footer";
 
-import { MarqueeDemo } from "./components/marquee1";
-import {LavaLamp} from "./components/common/Background/fluid-blob";
+// import { MarqueeDemo } from "./components/marquee1";
+// import {LavaLamp} from "./components/common/Background/fluid-blob";
 
 // Lazy loading ile geç yüklenen bileşenler
 const Frameworks = lazy(() => import("./components/Frameworks"));
@@ -22,9 +22,8 @@ const LoadingSpinner = memo(function LoadingSpinner() {
 
 const App = memo(function App() {
   return (
-    <div className="w-screen min-h-full overflow-x-hidden font-montserrat font-poppinsSemiBold relative bg-black bg-transparent">
-     
-      <LavaLamp />
+    <div className="bg-[#05051a] w-screen min-h-full overflow-x-hidden font-montserrat font-poppinsSemiBold relative bg-transparent">
+      {/* <LavaLamp /> */}
 
       <div className="relative z-10 mx-auto w-full max-w-7xl p-4 pt-6 max-sm:pt-0"></div>
       <div className="relative z-10">
@@ -38,7 +37,7 @@ const App = memo(function App() {
             </article>
           </section>
 
-          <MarqueeDemo />
+          {/* <MarqueeDemo /> */}
           <section className="w-full">
             <Suspense fallback={<LoadingSpinner />}>
               <Frameworks />
