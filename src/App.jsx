@@ -22,7 +22,7 @@ const LoadingSpinner = memo(function LoadingSpinner() {
 
 const App = memo(function App() {
   return (
-    <div className="bg-[#05051a] w-screen min-h-full overflow-x-hidden font-montserrat font-poppinsSemiBold relative bg-transparent">
+    <div className="bg-[#05051a] w-screen min-h-full overflow-x-hidden font-montserrat font-poppinsSemiBold relative">
       {/* <LavaLamp /> */}
 
       <div className="relative z-10 mx-auto w-full max-w-7xl p-4 pt-6 max-sm:pt-0"></div>
