@@ -3,6 +3,7 @@ import { lazy, Suspense, memo } from "react";
 import Profileimg from "./components/Profileimg";
 import Aboutme from "./components/Aboutme";
 import Footer from "./components/layout/Footer";
+import sneaks from "../assets/sneaks.png";
 
 // import { MarqueeDemo } from "./components/marquee1";
 // import {LavaLamp} from "./components/common/Background/fluid-blob";
@@ -43,6 +44,14 @@ const App = memo(function App() {
               <Frameworks />
             </Suspense>
           </section>
+          
+          <img
+
+          src={sneaks}
+
+          alt="sneaks"
+          className="w-full h-full"
+          />
 
           <section className="w-full py-3">
             <Suspense fallback={<LoadingSpinner />}>
