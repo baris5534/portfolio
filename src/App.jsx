@@ -44,7 +44,9 @@ const App = memo(function App() {
               <Frameworks />
             </Suspense>
           </section>
-          
+          <a href="/GeminiSneaks.png" download="GeminiSneaks.png">
+                İndir
+                    </a>
           <img
 
           src={sneaks}
