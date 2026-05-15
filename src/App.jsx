@@ -47,13 +47,7 @@ const App = memo(function App() {
           <a href="/GeminiSneaks.png" download="GeminiSneaks.png">
                 İndir
                     </a>
-          <img
-
-          src={sneaks}
-
-          alt="sneaks"
-          className="w-full h-full"
-          />
+          
 
           <section className="w-full py-3">
             <Suspense fallback={<LoadingSpinner />}>
